@@ -1,0 +1,5 @@
+1.  Judul: Development an Adaptive EEG Model for Machine Learning based Attention Detection (Neurofeedback Therapy)
+    1.  Nomor Topik: D4.1
+    2.  Deskripsi Singkat: 
+    3.  Mahasiswa: Teddy Marcus Zakaria (Kontak: 085795650857)
+    4.  Status: Menuju SK1
