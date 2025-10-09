@@ -1,0 +1,28 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Triune-Intelligence Smart-Engineering"
+  author: "Armein Z. R. Langi"
+  date: "10/9/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - topik-s1.qmd
+    - topik-s2.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  latex:
+    documentclass: scrreprt
+
+
+
