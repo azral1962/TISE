@@ -9,8 +9,9 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - topik-s1.qmd
+    - topik-s3.qmd
     - topik-s2.qmd
+    - topik-s1.qmd
     - summary.qmd
     - references.qmd
 
