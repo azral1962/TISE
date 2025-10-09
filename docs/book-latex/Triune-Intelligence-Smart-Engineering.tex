@@ -1,0 +1,781 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Triune-Intelligence Smart-Engineering},
+  pdfauthor={Armein Z. R. Langi},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Triune-Intelligence Smart-Engineering}
+\author{Armein Z. R. Langi}
+\date{2025-10-09}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Pengantar}\label{pengantar}
+\addcontentsline{toc}{chapter}{Pengantar}
+
+\markboth{Pengantar}{Pengantar}
+
+Selamat datang di Kelompok Penelitian Triune Intelligence Smart
+Engineering (TISE).
+
+Di portal ini Anda dapat melihat daftar Topik tugas akhir, tesis, dan
+disertasi TISE yang sedang dikerjakan maupun yang sedang ditawarkan.
+
+Topik disusun berdasarkan tema atau topik besar, ynag kemudian diuraikan
+ke dalam topik-topik yang lebih spesifik.
+
+\bookmarksetup{startatroot}
+
+\chapter{Pendahuluan}\label{pendahuluan}
+
+This is a book created from markdown and executable code.
+
+See Knuth (1984) for additional discussion of literate programming.
+
+\bookmarksetup{startatroot}
+
+\chapter{Topik Disertasi (S3)}\label{topik-disertasi-s3}
+
+\section{Tema 1: Project and Financial
+Engineering}\label{tema-1-project-and-financial-engineering}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Judul: Model Value Index Untuk Rekayasa Produk Finansial dengan
+  penerapannya pada Digital Loan.
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Nomor Topik: D1.1
+  \item
+    Deskripsi Singkat:
+  \item
+    Mahasiwa: Sen Yung
+  \item
+    Status: Review Disertasi
+  \end{enumerate}
+\item
+  Judul: Portofolio Project Optimisasi Model Menggunakan Pembiayaan
+  Campuran
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Nomor Topik: D1.2
+  \item
+    Deskripsi Singkat:
+  \item
+    Mahasiswa: Nisa Hanum
+  \item
+    Status: SK2
+  \end{enumerate}
+\end{enumerate}
+
+\section{Tema 2: Quality of
+Experience}\label{tema-2-quality-of-experience}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Judul: Optimisasi QoE Layanan Video Streaming Berbasis Persepsi
+  Pengguna
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Nomor Topik: D2.1
+  \item
+    Deskripsi Singkat: Penelitian ini membahas keterkaitan antara
+    persepsi pengguna dan kualitas pengalaman (Quality of
+    Experience/QoE) pada layanan video streaming dengan memanfaatkan
+    data publik dari media sosial. Dalam era persaingan layanan digital
+    yang semakin ketat, memahami kepuasan pengguna secara langsung
+    menjadi kunci dalam pengembangan layanan yang adaptif dan
+    berkelanjutan. Studi ini menggunakan pendekatan analisis sentimen
+    dan teknik penambangan teks untuk mengekstraksi opini pengguna yang
+    ditujukan kepada berbagai platform video streaming. Setiap persepsi
+    kemudian diklasifikasikan ke dalam dimensi QoE yang mencerminkan
+    aspek manusia, konten, konteks, dan sistem. Hasil penelitian ini
+    membuka peluang besar untuk mengembangkan model optimisasi QoE
+    berbasis persepsi pengguna secara real-time, yang dapat digunakan
+    untuk meningkatkan kualitas layanan, personalisasi konten, serta
+    strategi adaptasi teknis. Ke depan, pendekatan ini dapat diperluas
+    ke berbagai jenis media digital dan lingkungan jaringan yang lebih
+    kompleks.
+  \item
+    Mahasiswa: Fahmi Candra Permana
+  \item
+    Status: Sudah SK2, Menuju SK3
+  \end{enumerate}
+\end{enumerate}
+
+\section{Tema 3: Smart Living
+Environment}\label{tema-3-smart-living-environment}
+
+\section{Tema 4: Smart Signal Processing for Human Therapy
+Purposes}\label{tema-4-smart-signal-processing-for-human-therapy-purposes}
+
+\section{Tema 5: Smart Working Environment in Academic
+Settings}\label{tema-5-smart-working-environment-in-academic-settings}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Judul: Smart Campus Model
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Nomor Topik: D5.1
+  \item
+    Deskripsi Singkat:
+  \item
+    Mahasiswa: Radiant Victor Imbar
+  \item
+    Status: Selesai (Tahun 2024)
+  \end{enumerate}
+\item
+  Judul: Framework Manajemen Cerdas Pengambilan Keputusan Menggunakan
+  Pembelajaran Mesin dan Manajemen Pengetahuan untuk Mendukung
+  Akreditasi Program Studi
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Nomor Topik: D5.2
+  \item
+    Deskripsi Singkat: Penelitian ini mengusulkan pengembangan Framework
+    Manajemen Cerdas (FMC) berbasis pembelajaran mesin (Machine
+    Learning/ML) dan manajemen pengetahuan (Knowledge Management/KM)
+    untuk mendukung pengambilan keputusan strategis dalam akreditasi
+    program studi di perguruan tinggi. Melalui pendekatan Smart
+    Engineering, framework ini dirancang untuk mengintegrasikan
+    kecerdasan buatan, sistem data terpusat, dan peta pengetahuan agar
+    siklus PPEPP (Perencanaan, Pelaksanaan, Evaluasi, Pengendalian, dan
+    Peningkatan) dapat berjalan lebih efisien dan adaptif. FMC
+    menggunakan arsitektur ASTF (Application, System, Technology,
+    Fundamental) dan proses rekayasa V-Model dengan inti mesin PUDAL
+    (Perceive, Understand, Decision, Act, Learn) yang berfungsi untuk
+    melakukan persepsi data, memahami konteks standar akreditasi,
+    mengambil keputusan berbasis bukti, mengeksekusi tindakan
+    rekomendasi, dan belajar dari hasil akreditasi secara berkelanjutan.
+    Penelitian ini diharapkan menghasilkan kerangka sistem cerdas yang
+    mengotomatiskan evaluasi mutu, meningkatkan efektivitas pengambilan
+    keputusan berbasis data, serta memperkuat kepatuhan terhadap standar
+    akreditasi khususnya bagi perguruan tinggi dengan sumber daya
+    terbatas.
+  \item
+    Mahasiswa: Daniel Jahja Surjawan
+  \item
+    Status: Menuju SK1
+  \end{enumerate}
+\item
+  Judul: Kerangka Kerja Manajemen Pengetahuan Kolaboratif Berbasis
+  Rekayasa Cerdas untuk Pendidikan Tinggi Beriorientasi Nilai
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Nomor Topik: D5.3
+  \item
+    Deskripsi Singkat: Penelitian ini mengusulkan pengembangan Kerangka
+    Sistem Manajemen Pengetahuan Kolaboratif Cerdas berbasis Rekayasa
+    Cerdas (Collaborative Knowledge Management System-Smart
+    Engineering/CKMS-SE) sebagai Smart Artefact. CKMS-SE dirancang
+    dengan Core Engine (platform CKMS fundamental), PUDAL Engine
+    (Perceive, Understand, Decision-Making and Planning, Act-Response,
+    Learning-Evaluating) yang didukung oleh Kecerdasan Buatan
+    (Artificial Intelligence/AI) untuk pembelajaran personal
+    (Personalized Learning/PL) dinamis dan memfasilitasi pembelajaran
+    kolaborasi (Collaborative Learning/CL) efektif, serta PSKVE Engine
+    (Product, Service, Knowledge, Value, Environmental) untuk mengelola
+    dan mengoptimalkan VCC dalam konteks VOE. Arsitektur sistem
+    mengimplementasikan Triune-Intelligence Smart Engineering (TISE)
+    yang menyinergikan kecerdasan manusia (Homocordium), kecerdasan
+    buatan (Homologos), dan kecerdasan alamiah untuk memastikan
+    penyelarasan nilai dalam sistem pembelajaran cerdas.
+  \item
+    Mahasiswa: Meliana Christianti Johan
+  \item
+    Status: Menuju SK1
+  \end{enumerate}
+\end{enumerate}
+
+\bookmarksetup{startatroot}
+
+\chapter{Topik Tesis}\label{topik-tesis}
+
+Berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1)
+yang diturunkan dari riset disertasi S3 mengenai \emph{Multi-Stakeholder
+Food Recommendation System}, beserta deskripsi singkatnya.
+
+\section{\texorpdfstring{\textbf{Daftar Topik Tesis (S2) MSRS -
+Kontribusi pada Layer
+Sistem}}{Daftar Topik Tesis (S2) MSRS - Kontribusi pada Layer Sistem}}\label{daftar-topik-tesis-s2-msrs---kontribusi-pada-layer-sistem}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Arsitektur Sistem MSRS Berbasis Microservices untuk Integrasi
+  Pemangku Kepentingan yang Skalabel}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Merancang cetak biru (arsitektur) sistem
+    MSRS secara keseluruhan menggunakan pendekatan \emph{microservices}.
+    Penelitian ini berfokus pada cara mengintegrasikan data dan
+    kebutuhan dari berbagai pihak (konsumen, produsen, ahli gizi) secara
+    fleksibel dan andal, serta mendefinisikan API sebagai ``jembatan''
+    komunikasi antar komponen.
+  \end{itemize}
+\item
+  \textbf{Pengembangan Ontologi dan Kerangka Tata Kelola Data untuk
+  Ekosistem Pangan Sehat}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Membangun model pengetahuan formal
+    (ontologi) yang menjadi ``kamus bersama'' untuk merepresentasikan
+    seluruh entitas dan hubungan dalam sistem pangan (misal: nutrisi,
+    kapasitas produksi, preferensi diet). Penelitian ini juga merancang
+    aturan tata kelola untuk memastikan data yang digunakan berkualitas,
+    aman, dan privat.
+  \end{itemize}
+\end{enumerate}
+
+\section{Topik Tesis Magister (S2)
+VALORIZE}\label{topik-tesis-magister-s2-valorize}
+
+Berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1)
+yang diturunkan dari riset disertasi S3 mengenai \emph{VALORIZE System},
+beserta deskripsi singkatnya.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{S2.1: Desain dan Arsitektur Sistem Pasar Pengetahuan PSKVE
+  Berbasis \emph{Microservices}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Merancang arsitektur sistem yang lengkap
+    dan dapat diskalakan untuk Pasar Pengetahuan TISE-Valorize dengan
+    menerapkan prinsip-prinsip \emph{microservices} untuk memastikan
+    ketahanan dan kemudahan pemeliharaan sistem.{[}1, 2, 3, 4{]}
+  \end{itemize}
+\item
+  \textbf{S2.2: Kerangka Kerja \emph{Model-Based Systems Engineering}
+  (MBSE) untuk Alur Kerja Kognitif TISE-VALORIZE}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Menerapkan metodologi rekayasa sistem
+    formal (MBSE) menggunakan SysML untuk menciptakan model yang presisi
+    dan dapat dieksekusi dari seluruh alur kerja pedagogis
+    TISE-VALORIZE, guna memverifikasi konsistensi logisnya.{[}1, 5, 6{]}
+  \end{itemize}
+\item
+  \textbf{S2.3: Arsitektur \emph{Data Warehousing} dan ETL untuk
+  Platform Analitik Pembelajaran VALORIZE}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Merancang arsitektur data
+    \emph{back-end} dan proses \emph{Extract, Transform, Load} (ETL)
+    yang diperlukan untuk secara sistematis menangkap, mengubah, dan
+    menganalisis data kaya yang dihasilkan oleh mahasiswa di dalam
+    ekosistem VALORIZE.{[}7, 8{]}
+  \end{itemize}
+\end{itemize}
+
+Tentu, berikut adalah daftar topik riset turunan dari disertasi S3
+``GRACE System'' beserta deskripsi singkatnya, dikelompokkan untuk
+jenjang Tesis Magister (S2) dan Tugas Akhir Sarjana (S1).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{\texorpdfstring{\textbf{Daftar Topik Tesis (S2) GRACE - Layer
+Sistem}}{Daftar Topik Tesis (S2) GRACE - Layer Sistem}}\label{daftar-topik-tesis-s2-grace---layer-sistem}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Arsitektur Sosio-Teknis untuk ``Wisdom as a Service'' pada
+  Platform C-GRACE:} Merancang arsitektur sistem yang mengintegrasikan
+  platform teknis dengan model sosial (reputasi, insentif) untuk
+  memfasilitasi lansia berbagi keahlian dan kearifan mereka secara
+  efektif dan adil.
+\item
+  \textbf{Desain Sistem Interoperabilitas Data Kesehatan pada O-GRACE:}
+  Merancang arsitektur sistem yang aman dan terstandar untuk
+  mengumpulkan dan mengelola data dari berbagai perangkat kesehatan
+  (IoT) pihak ketiga, guna mendukung rekomendasi kesehatan yang
+  dipersonalisasi bagi lansia.
+\item
+  \textbf{Sistem Manajemen Identitas dan Privasi Terdistribusi untuk
+  Ekosistem GRACE:} Merancang sebuah sistem yang memungkinkan lansia
+  memiliki kontrol penuh atas data pribadi mereka di seluruh subsistem
+  GRACE (I, C, O, F) menggunakan prinsip-prinsip \emph{Self-Sovereign
+  Identity} (SSI).
+\item
+  \textbf{Model Tata Kelola Komunitas Adaptif untuk C-GRACE Berbasis
+  AI:} Mengembangkan arsitektur sistem tata kelola (governance) yang
+  menggunakan AI untuk menganalisis dinamika komunitas dan
+  merekomendasikan aturan atau intervensi guna menjaga lingkungan yang
+  positif dan produktif.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Berikut ini adalah daftar topik riset S2 dan S1 yang diturunkan dari
+disertasi S3 ``Model Adaptif EEG Untuk Deteksi Perhatian Berbasis
+Machine Learning'', beserta deskripsi singkatnya.
+
+\section{\texorpdfstring{\textbf{Topik Tesis (S2 -
+Magister)}}{Topik Tesis (S2 - Magister)}}\label{topik-tesis-s2---magister}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Topik 1: Rancang Bangun Sistem Neurofeedback Adaptif
+  \emph{Real-time} untuk Peningkatan Fokus Belajar Menggunakan Sinyal
+  EEG.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Mengembangkan arsitektur sistem yang
+    mengintegrasikan model AI pendeteksi perhatian dengan perangkat EEG
+    dan antarmuka pengguna untuk memberikan umpan balik \emph{real-time}
+    guna melatih fokus.
+  \end{itemize}
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\chapter{Topik Tugas Akhir}\label{topik-tugas-akhir}
+
+\section{\texorpdfstring{\textbf{Daftar Topik Tugas Akhir (S1) -
+Kontribusi pada Layer Aplikasi
+MSRS}}{Daftar Topik Tugas Akhir (S1) - Kontribusi pada Layer Aplikasi MSRS}}\label{daftar-topik-tugas-akhir-s1---kontribusi-pada-layer-aplikasi-msrs}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Pengembangan Aplikasi Mobile MSRS untuk Peningkatan Gizi dan
+  Dukungan UMKM Lokal (Studi Kasus: Lingkungan Kampus)}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Merancang dan membangun prototipe
+    aplikasi \emph{mobile} yang memberikan rekomendasi makanan sehat
+    dari kantin atau UMKM di sekitar kampus. Aplikasi ini akan
+    divalidasi langsung oleh pengguna (mahasiswa) untuk menguji
+    kemudahan penggunaan dan dampaknya terhadap pilihan makanan.
+  \end{itemize}
+\item
+  \textbf{Rancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan
+  Produsen Pangan (UMKM/Petani)}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Membuat sebuah aplikasi \emph{dashboard}
+    (berbasis web atau \emph{mobile}) yang ditujukan khusus untuk
+    produsen. \emph{Dashboard} ini akan menampilkan visualisasi data
+    tren permintaan pasar, preferensi konsumen, dan umpan balik,
+    sehingga membantu produsen mengambil keputusan bisnis yang lebih
+    baik.
+  \end{itemize}
+\item
+  \textbf{Sistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan
+  Makan Sehat di Kalangan Remaja}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Mengimplementasikan fitur-fitur
+    gamifikasi (seperti poin, lencana, dan tantangan) ke dalam aplikasi
+    MSRS. Tujuan utamanya adalah untuk meningkatkan keterlibatan
+    (\emph{engagement}) dan motivasi pengguna, khususnya remaja, dalam
+    memilih dan mempertahankan pola makan yang sehat.
+  \end{itemize}
+\item
+  \textbf{Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada
+  Produk UMKM Menggunakan Natural Language Processing (NLP)}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Membangun model NLP untuk secara
+    otomatis menganalisis dan mengklasifikasikan ulasan atau umpan balik
+    yang diberikan pengguna terhadap produk makanan dari UMKM. Hasil
+    analisis ini dapat memberikan wawasan kualitatif yang berharga bagi
+    produsen untuk meningkatkan kualitas produk mereka.
+  \end{itemize}
+\end{enumerate}
+
+\section{Topik Tugas Akhir Sarjana (S1)
+VALORIZE}\label{topik-tugas-akhir-sarjana-s1-valorize}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{S1.1: Aplikasi untuk Visualisasi dan Manajemen
+  \emph{Real-Time} Portofolio PSKVE Mahasiswa}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Merancang, mengembangkan, dan
+    mengevaluasi sebuah aplikasi dasbor berbasis web yang berfungsi
+    sebagai antarmuka utama bagi mahasiswa dan dosen untuk berinteraksi
+    dan memvisualisasikan portofolio nilai PSKVE mereka.{[}1, 2, 9{]}
+  \end{itemize}
+\item
+  \textbf{S1.2: Pengembangan dan Validasi Alat Penilaian dan Rubrik
+  untuk Peta Kognitif Formal}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Mengembangkan sebuah rubrik penilaian
+    yang terperinci dan alat pendukungnya untuk menilai kualitas peta
+    kognitif formal, serta memvalidasi keandalannya secara ilmiah
+    menggunakan statistik reliabilitas antar-penilai.{[}2, 10, 11{]}
+  \end{itemize}
+\item
+  \textbf{S1.3: Studi Kasus Penerapan Kerangka Kerja TISE PUDAL/TI pada
+  Pengurangan Sampah Makanan}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Melakukan studi kasus mendalam dengan
+    menerapkan alur kerja kognitif TISE (PUDAL/\emph{Triune
+    Intelligence}) secara penuh untuk menganalisis dan mengusulkan
+    solusi pada sub-masalah spesifik dalam krisis keberlanjutan pangan
+    di Indonesia.{[}1, 12{]}
+  \end{itemize}
+\item
+  \textbf{S1.4: Evaluasi Usabilitas dan Efikasi Lingkungan Belajar
+  TISE-VALORIZE}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Melakukan studi penelitian formal dengan
+    metode campuran untuk mengukur usabilitas kuantitatif dari alat-alat
+    perangkat lunak dan mengeksplorasi persepsi kualitatif mahasiswa
+    mengenai efektivitas pedagogis dari lingkungan belajar
+    TISE-VALORIZE.{[}13, 14{]}
+  \end{itemize}
+\end{itemize}
+
+\section{\texorpdfstring{\textbf{Daftar Topik Tugas Akhir (S1) - Layer
+Aplikasi
+GRACE}}{Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE}}\label{daftar-topik-tugas-akhir-s1---layer-aplikasi-grace}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Perancangan dan Evaluasi Antarmuka ``GRACE Life Map'' untuk
+  Refleksi Diri Lansia:} Merancang dan menguji usabilitas sebuah
+  aplikasi visualisasi narasi kehidupan yang intuitif dan menarik bagi
+  lansia untuk membantu mereka merenungkan dan menceritakan kisah
+  hidupnya.
+\item
+  \textbf{Implementasi Modul Gamifikasi untuk Mendorong Kontribusi
+  Lansia di C-GRACE:} Mengembangkan dan menguji aplikasi modul
+  gamifikasi (poin, lencana, papan peringkat) yang dirancang khusus
+  untuk memotivasi partisipasi lansia dalam berbagai kegiatan komunitas.
+\item
+  \textbf{Aplikasi ``Perekam Cerita Keluarga'' pada F-GRACE untuk
+  Komunikasi Antargenerasi:} Membangun aplikasi seluler yang memandu
+  lansia dan anggota keluarga yang lebih muda untuk merekam cerita dan
+  kenangan bersama secara interaktif.
+\item
+  \textbf{Prototipe Chatbot ``GRACE Health Companion'' untuk Dukungan
+  Kesehatan Harian:} Mengembangkan aplikasi chatbot sederhana yang dapat
+  memberikan pengingat minum obat, tips gaya hidup sehat, dan informasi
+  kesehatan dasar kepada lansia melalui antarmuka percakapan.
+\item
+  \textbf{Pengembangan Aplikasi ``Direktori Aktivitas Sosial''
+  Terpersonalisasi untuk Lansia:} Membuat aplikasi yang memberikan
+  rekomendasi kegiatan sosial atau komunitas di sekitar lokasi lansia,
+  sesuai dengan minat dan kemampuan fisik mereka.
+\end{enumerate}
+
+\section{\texorpdfstring{\textbf{Topik Tugas Akhir (S1 - Sarjana)
+Neurofeedback}}{Topik Tugas Akhir (S1 - Sarjana) Neurofeedback}}\label{topik-tugas-akhir-s1---sarjana-neurofeedback}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Topik 1: Penerapan dan Analisis Sistem Deteksi Perhatian EEG
+  untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran
+  Daring.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Menguji dan memvalidasi sistem deteksi
+    perhatian dalam lingkungan \emph{e-learning} untuk melihat korelasi
+    antara tingkat perhatian yang diukur EEG dengan hasil belajar
+    mahasiswa.
+  \end{itemize}
+\item
+  \textbf{Topik 2: Studi Komparatif Efektivitas Umpan Balik Visual
+  vs.~Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan
+  Relaksasi.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Deskripsi Singkat:} Membandingkan dua jenis umpan balik
+    (visual dan suara) pada sistem \emph{neurofeedback} untuk menentukan
+    mana yang lebih efektif dalam membantu pengguna mencapai kondisi
+    relaksasi.
+  \end{itemize}
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\chapter{Lankah Selajutnya}\label{lankah-selajutnya}
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-knuth84}
+Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
+(2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
