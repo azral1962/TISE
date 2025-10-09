@@ -2,6 +2,8 @@
 
 ## Tema 1: Project and Financial Engineering
 
+{{< include ./Tema_5/topik-s3-1.1.qmd >}}
+{{< include ./Tema_5/topik-s3-1.2.qmd >}}
 
 ## Tema 2: Quality of Experience
 
