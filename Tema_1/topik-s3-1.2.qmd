@@ -3,8 +3,12 @@
 
     1.  Nomor Topik: D1.2
 
-    2.  Deskripsi Singkat:
+    2.  Deskripsi Singkat: Tema ini memperkenalkan Integrated Flexible Portfolio Optimization Model (IFPOM) — sebuah model optimasi multiobjektif yang dirancang untuk membantu pengambil keputusan dalam memilih portofolio proyek teknologi informasi dan komunikasi (ICT) secara strategis, dengan mempertimbangkan ketidakpastian finansial, risiko teknologi, dan sinergi antar proyek.
 
     3.  Mahasiswa: Nisa Hanum
 
+<<<<<<< Updated upstream
     4.  Status: SK2
+=======
+    4.  Status: SK2
+>>>>>>> Stashed changes
