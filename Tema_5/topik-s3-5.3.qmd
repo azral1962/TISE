@@ -1,4 +1,4 @@
-# Topik Disertasi (S3)
+# Topik Disertasi
 
 ## Tema 1: Project and Financial Engineering
 
@@ -69,11 +69,6 @@
     4.  Status: Menuju SK1
 3.  Judul: Kerangka Kerja Manajemen Pengetahuan Kolaboratif Berbasis Rekayasa Cerdas untuk Pendidikan Tinggi Beriorientasi Nilai
     1.  Nomor Topik: D5.3
-    2.  Deskripsi Singkat: 
-    Penelitian ini mengusulkan pengembangan Kerangka Sistem Manajemen Pengetahuan Kolaboratif Cerdas berbasis Rekayasa Cerdas (Collaborative Knowledge Management System-Smart Engineering/CKMS-SE) sebagai Smart Artefact. CKMS-SE dirancang dengan Core Engine (platform CKMS fundamental), PUDAL Engine (Perceive, Understand, Decision-Making and Planning, Act-Response, Learning-Evaluating) yang didukung oleh Kecerdasan Buatan (Artificial Intelligence/AI) untuk pembelajaran personal (Personalized Learning/PL) dinamis dan memfasilitasi pembelajaran kolaborasi (Collaborative Learning/CL) efektif, serta PSKVE Engine (Product, Service, Knowledge, Value, Environmental) untuk mengelola dan mengoptimalkan VCC dalam konteks VOE. Arsitektur sistem mengimplementasikan Triune-Intelligence Smart Engineering (TISE) yang menyinergikan kecerdasan manusia (Homocordium), kecerdasan buatan (Homologos), dan kecerdasan alamiah untuk memastikan penyelarasan nilai dalam sistem pembelajaran cerdas.
+    2.  Deskripsi Singkat:
     3.  Mahasiswa: Meliana Christianti Johan
     4.  Status: Menuju SK1
-
-    {{< include ./Tema_5/topik-s3-5.1.qmd >}}
-    {{< include ./Tema_5/topik-s3-5.2.qmd >}}
-    {{< include ./Tema_5/topik-s3-5.3.qmd >}}
