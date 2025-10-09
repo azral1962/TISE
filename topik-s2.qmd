@@ -1,6 +1,6 @@
 # Topik Tesis
 
-Tentu, berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) yang diturunkan dari riset disertasi S3 mengenai *Multi-Stakeholder Food Recommendation System*, beserta deskripsi singkatnya.
+Berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) yang diturunkan dari riset disertasi S3 mengenai *Multi-Stakeholder Food Recommendation System*, beserta deskripsi singkatnya.
 
 ## **Daftar Topik Tesis (S2) MSRS - Kontribusi pada Layer Sistem**
 
@@ -12,7 +12,7 @@ Tentu, berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) ya
 
 ## Topik Tesis Magister (S2) VALORIZE
 
-Tentu, berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) yang diturunkan dari riset disertasi S3 mengenai *VALORIZE  System*, beserta deskripsi singkatnya.
+Berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) yang diturunkan dari riset disertasi S3 mengenai *VALORIZE  System*, beserta deskripsi singkatnya.
 
 
 *   **S2.1: Desain dan Arsitektur Sistem Pasar Pengetahuan PSKVE Berbasis *Microservices***
@@ -39,7 +39,7 @@ Tentu, berikut adalah daftar topik riset turunan dari disertasi S3 "GRACE System
 4.  **Model Tata Kelola Komunitas Adaptif untuk C-GRACE Berbasis AI:** Mengembangkan arsitektur sistem tata kelola (governance) yang menggunakan AI untuk menganalisis dinamika komunitas dan merekomendasikan aturan atau intervensi guna menjaga lingkungan yang positif dan produktif.
 
 ---
-Tentu, ini adalah daftar topik riset S2 dan S1 yang diturunkan dari disertasi S3 "Model Adaptif EEG Untuk Deteksi Perhatian Berbasis Machine Learning", beserta deskripsi singkatnya.
+Berikut ini adalah daftar topik riset S2 dan S1 yang diturunkan dari disertasi S3 "Model Adaptif EEG Untuk Deteksi Perhatian Berbasis Machine Learning", beserta deskripsi singkatnya.
 
 ## **Topik Tesis (S2 - Magister)**
 
