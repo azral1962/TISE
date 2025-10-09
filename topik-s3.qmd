@@ -11,9 +11,12 @@
 
 ## Tema 3: Smart Living Environment
 
+{{< include ./Tema_3/topik-s3-3.1.qmd >}}
+{{< include ./Tema_3/topik-s3-3.1.qmd >}}
 
 ## Tema 4: Smart Signal Processing for Human Therapy Purposes
 
+{{< include ./Tema_4/topik-s3-4.1.qmd >}}
 
 ## Tema 5: Smart Working Environment in Academic Settings
 
