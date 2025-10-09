@@ -2,7 +2,7 @@
 
     1.  Nomor Topik: D1.1
 
-    2.  Deskripsi Singkat:
+    2.  Deskripsi Singkat: Penelitian ini mengatasi tantangan sosio-teknis dalam ekosistem keuangan digital, khususnya digital loan, yang dipicu oleh asimetri informasi dan keterbatasan model evaluasi seperti credit scoring konvensional yang statis dan hanya berfokus pada riwayat borrower. Untuk menjawab permasalahan tersebut, dirancang sistem rekayasa finansial bernama Smart Loan Arranger yang berpusat pada Model Value Index, sebuah artefak hasil pendekatan Value Engineering dan paradigma Smart Engineering untuk mengukur nilai intrinsik pinjaman dari perspektif multi-stakeholder.
 
     3.  Mahasiwa: Sen Yung
 
