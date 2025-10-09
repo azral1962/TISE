@@ -1,0 +1,47 @@
+# Topik Tesis
+
+Tentu, berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) yang diturunkan dari riset disertasi S3 mengenai *Multi-Stakeholder Food Recommendation System*, beserta deskripsi singkatnya.
+
+## **Daftar Topik Tesis (S2) MSRS - Kontribusi pada Layer Sistem**
+
+1.  **Arsitektur Sistem MSRS Berbasis Microservices untuk Integrasi Pemangku Kepentingan yang Skalabel**
+    * **Deskripsi Singkat:** Merancang cetak biru (arsitektur) sistem MSRS secara keseluruhan menggunakan pendekatan *microservices*. Penelitian ini berfokus pada cara mengintegrasikan data dan kebutuhan dari berbagai pihak (konsumen, produsen, ahli gizi) secara fleksibel dan andal, serta mendefinisikan API sebagai "jembatan" komunikasi antar komponen.
+
+2.  **Pengembangan Ontologi dan Kerangka Tata Kelola Data untuk Ekosistem Pangan Sehat**
+    * **Deskripsi Singkat:** Membangun model pengetahuan formal (ontologi) yang menjadi "kamus bersama" untuk merepresentasikan seluruh entitas dan hubungan dalam sistem pangan (misal: nutrisi, kapasitas produksi, preferensi diet). Penelitian ini juga merancang aturan tata kelola untuk memastikan data yang digunakan berkualitas, aman, dan privat.
+
+## Topik Tesis Magister (S2) VALORIZE
+
+Tentu, berikut adalah daftar topik penelitian Tesis (S2) dan Tugas Akhir (S1) yang diturunkan dari riset disertasi S3 mengenai *VALORIZE  System*, beserta deskripsi singkatnya.
+
+
+*   **S2.1: Desain dan Arsitektur Sistem Pasar Pengetahuan PSKVE Berbasis *Microservices***
+    *   **Deskripsi Singkat:** Merancang arsitektur sistem yang lengkap dan dapat diskalakan untuk Pasar Pengetahuan TISE-Valorize dengan menerapkan prinsip-prinsip *microservices* untuk memastikan ketahanan dan kemudahan pemeliharaan sistem.[1, 2, 3, 4]
+
+*   **S2.2: Kerangka Kerja *Model-Based Systems Engineering* (MBSE) untuk Alur Kerja Kognitif TISE-VALORIZE**
+    *   **Deskripsi Singkat:** Menerapkan metodologi rekayasa sistem formal (MBSE) menggunakan SysML untuk menciptakan model yang presisi dan dapat dieksekusi dari seluruh alur kerja pedagogis TISE-VALORIZE, guna memverifikasi konsistensi logisnya.[1, 5, 6]
+
+*   **S2.3: Arsitektur *Data Warehousing* dan ETL untuk Platform Analitik Pembelajaran VALORIZE**
+    *   **Deskripsi Singkat:** Merancang arsitektur data *back-end* dan proses *Extract, Transform, Load* (ETL) yang diperlukan untuk secara sistematis menangkap, mengubah, dan menganalisis data kaya yang dihasilkan oleh mahasiswa di dalam ekosistem VALORIZE.[7, 8]
+
+Tentu, berikut adalah daftar topik riset turunan dari disertasi S3 "GRACE System" beserta deskripsi singkatnya, dikelompokkan untuk jenjang Tesis Magister (S2) dan Tugas Akhir Sarjana (S1).
+
+---
+
+## **Daftar Topik Tesis (S2) GRACE - Layer Sistem**
+
+1.  **Arsitektur Sosio-Teknis untuk "Wisdom as a Service" pada Platform C-GRACE:** Merancang arsitektur sistem yang mengintegrasikan platform teknis dengan model sosial (reputasi, insentif) untuk memfasilitasi lansia berbagi keahlian dan kearifan mereka secara efektif dan adil.
+
+2.  **Desain Sistem Interoperabilitas Data Kesehatan pada O-GRACE:** Merancang arsitektur sistem yang aman dan terstandar untuk mengumpulkan dan mengelola data dari berbagai perangkat kesehatan (IoT) pihak ketiga, guna mendukung rekomendasi kesehatan yang dipersonalisasi bagi lansia.
+
+3.  **Sistem Manajemen Identitas dan Privasi Terdistribusi untuk Ekosistem GRACE:** Merancang sebuah sistem yang memungkinkan lansia memiliki kontrol penuh atas data pribadi mereka di seluruh subsistem GRACE (I, C, O, F) menggunakan prinsip-prinsip *Self-Sovereign Identity* (SSI).
+
+4.  **Model Tata Kelola Komunitas Adaptif untuk C-GRACE Berbasis AI:** Mengembangkan arsitektur sistem tata kelola (governance) yang menggunakan AI untuk menganalisis dinamika komunitas dan merekomendasikan aturan atau intervensi guna menjaga lingkungan yang positif dan produktif.
+
+---
+Tentu, ini adalah daftar topik riset S2 dan S1 yang diturunkan dari disertasi S3 "Model Adaptif EEG Untuk Deteksi Perhatian Berbasis Machine Learning", beserta deskripsi singkatnya.
+
+## **Topik Tesis (S2 - Magister)**
+
+* **Topik 1: Rancang Bangun Sistem Neurofeedback Adaptif *Real-time* untuk Peningkatan Fokus Belajar Menggunakan Sinyal EEG.**
+    * **Deskripsi Singkat:** Mengembangkan arsitektur sistem yang mengintegrasikan model AI pendeteksi perhatian dengan perangkat EEG dan antarmuka pengguna untuk memberikan umpan balik *real-time* guna melatih fokus.
