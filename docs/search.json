@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Triune-Intelligence Smart-Engineering",
     "section": "",
-    "text": "Pengantar\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Pengantar\nSelamat datang di Kelompok Penelitian Triune Intelligence Smart Engineering (TISE).\nDi portal ini Anda dapat melihat daftar Topik tugas akhir, tesis, dan disertasi TISE yang sedang dikerjakan maupun yang sedang ditawarkan.\nTopik disusun berdasarkan tema atau topik besar, ynag kemudian diuraikan ke dalam topik-topik yang lebih spesifik.",
     "crumbs": [
       "Pengantar"
     ]
@@ -20,53 +20,63 @@
     ]
   },
   {
-    "objectID": "topik-s1.html",
-    "href": "topik-s1.html",
-    "title": "2  Topik Tugas Akhir",
+    "objectID": "topik-s3.html",
+    "href": "topik-s3.html",
+    "title": "2  Topik S3",
     "section": "",
-    "text": "2.1 Daftar Topik Tugas Akhir (S1) - Kontribusi pada Layer Aplikasi MSRS",
+    "text": "2.1 Tema 1: Project and Financial Engineering",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik S3</span>"
     ]
   },
   {
-    "objectID": "topik-s1.html#daftar-topik-tugas-akhir-s1---kontribusi-pada-layer-aplikasi-msrs",
-    "href": "topik-s1.html#daftar-topik-tugas-akhir-s1---kontribusi-pada-layer-aplikasi-msrs",
-    "title": "2  Topik Tugas Akhir",
+    "objectID": "topik-s3.html#tema-1-project-and-financial-engineering",
+    "href": "topik-s3.html#tema-1-project-and-financial-engineering",
+    "title": "2  Topik S3",
     "section": "",
-    "text": "Pengembangan Aplikasi Mobile MSRS untuk Peningkatan Gizi dan Dukungan UMKM Lokal (Studi Kasus: Lingkungan Kampus)\n\nDeskripsi Singkat: Merancang dan membangun prototipe aplikasi mobile yang memberikan rekomendasi makanan sehat dari kantin atau UMKM di sekitar kampus. Aplikasi ini akan divalidasi langsung oleh pengguna (mahasiswa) untuk menguji kemudahan penggunaan dan dampaknya terhadap pilihan makanan.\n\nRancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani)\n\nDeskripsi Singkat: Membuat sebuah aplikasi dashboard (berbasis web atau mobile) yang ditujukan khusus untuk produsen. Dashboard ini akan menampilkan visualisasi data tren permintaan pasar, preferensi konsumen, dan umpan balik, sehingga membantu produsen mengambil keputusan bisnis yang lebih baik.\n\nSistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan Makan Sehat di Kalangan Remaja\n\nDeskripsi Singkat: Mengimplementasikan fitur-fitur gamifikasi (seperti poin, lencana, dan tantangan) ke dalam aplikasi MSRS. Tujuan utamanya adalah untuk meningkatkan keterlibatan (engagement) dan motivasi pengguna, khususnya remaja, dalam memilih dan mempertahankan pola makan yang sehat.\n\nAnalisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP)\n\nDeskripsi Singkat: Membangun model NLP untuk secara otomatis menganalisis dan mengklasifikasikan ulasan atau umpan balik yang diberikan pengguna terhadap produk makanan dari UMKM. Hasil analisis ini dapat memberikan wawasan kualitatif yang berharga bagi produsen untuk meningkatkan kualitas produk mereka.",
+    "text": "Judul: Model Value Index Untuk Rekayasa Produk Finansial dengan penerapannya pada Digital Loan.\n\nNomor Topik: D1.1\nDeskripsi Singkat:\nMahasiwa: Sen Yung\nStatus: Review Disertasi\n\nJudul: Portofolio Project Optimisasi Model Menggunakan Pembiayaan Campuran\n\nNomor Topik: D1.2\nDeskripsi Singkat:\nMahasiswa: Nisa Hanum\nStatus: SK2",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik S3</span>"
     ]
   },
   {
-    "objectID": "topik-s1.html#topik-tugas-akhir-sarjana-s1-valorize",
-    "href": "topik-s1.html#topik-tugas-akhir-sarjana-s1-valorize",
-    "title": "2  Topik Tugas Akhir",
-    "section": "2.2 Topik Tugas Akhir Sarjana (S1) VALORIZE",
-    "text": "2.2 Topik Tugas Akhir Sarjana (S1) VALORIZE\n\nS1.1: Aplikasi untuk Visualisasi dan Manajemen Real-Time Portofolio PSKVE Mahasiswa\n\nDeskripsi Singkat: Merancang, mengembangkan, dan mengevaluasi sebuah aplikasi dasbor berbasis web yang berfungsi sebagai antarmuka utama bagi mahasiswa dan dosen untuk berinteraksi dan memvisualisasikan portofolio nilai PSKVE mereka.[1, 2, 9]\n\nS1.2: Pengembangan dan Validasi Alat Penilaian dan Rubrik untuk Peta Kognitif Formal\n\nDeskripsi Singkat: Mengembangkan sebuah rubrik penilaian yang terperinci dan alat pendukungnya untuk menilai kualitas peta kognitif formal, serta memvalidasi keandalannya secara ilmiah menggunakan statistik reliabilitas antar-penilai.[2, 10, 11]\n\nS1.3: Studi Kasus Penerapan Kerangka Kerja TISE PUDAL/TI pada Pengurangan Sampah Makanan\n\nDeskripsi Singkat: Melakukan studi kasus mendalam dengan menerapkan alur kerja kognitif TISE (PUDAL/Triune Intelligence) secara penuh untuk menganalisis dan mengusulkan solusi pada sub-masalah spesifik dalam krisis keberlanjutan pangan di Indonesia.[1, 12]\n\nS1.4: Evaluasi Usabilitas dan Efikasi Lingkungan Belajar TISE-VALORIZE\n\nDeskripsi Singkat: Melakukan studi penelitian formal dengan metode campuran untuk mengukur usabilitas kuantitatif dari alat-alat perangkat lunak dan mengeksplorasi persepsi kualitatif mahasiswa mengenai efektivitas pedagogis dari lingkungan belajar TISE-VALORIZE.[13, 14]",
+    "objectID": "topik-s3.html#tema-2-quality-of-experience",
+    "href": "topik-s3.html#tema-2-quality-of-experience",
+    "title": "2  Topik S3",
+    "section": "2.2 Tema 2: Quality of Experience",
+    "text": "2.2 Tema 2: Quality of Experience\n\nJudul: Optimisasi QoE Layanan Video Streaming Berbasis Persepsi Pengguna\n\nNomor Topik: D2.1\nDeskripsi Singkat:\nMahasiswa: Fahmi Candra Permana\nStatus: SK2",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik S3</span>"
     ]
   },
   {
-    "objectID": "topik-s1.html#daftar-topik-tugas-akhir-s1---layer-aplikasi-grace",
-    "href": "topik-s1.html#daftar-topik-tugas-akhir-s1---layer-aplikasi-grace",
-    "title": "2  Topik Tugas Akhir",
-    "section": "2.3 Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE",
-    "text": "2.3 Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE\n\nPerancangan dan Evaluasi Antarmuka “GRACE Life Map” untuk Refleksi Diri Lansia: Merancang dan menguji usabilitas sebuah aplikasi visualisasi narasi kehidupan yang intuitif dan menarik bagi lansia untuk membantu mereka merenungkan dan menceritakan kisah hidupnya.\nImplementasi Modul Gamifikasi untuk Mendorong Kontribusi Lansia di C-GRACE: Mengembangkan dan menguji aplikasi modul gamifikasi (poin, lencana, papan peringkat) yang dirancang khusus untuk memotivasi partisipasi lansia dalam berbagai kegiatan komunitas.\nAplikasi “Perekam Cerita Keluarga” pada F-GRACE untuk Komunikasi Antargenerasi: Membangun aplikasi seluler yang memandu lansia dan anggota keluarga yang lebih muda untuk merekam cerita dan kenangan bersama secara interaktif.\nPrototipe Chatbot “GRACE Health Companion” untuk Dukungan Kesehatan Harian: Mengembangkan aplikasi chatbot sederhana yang dapat memberikan pengingat minum obat, tips gaya hidup sehat, dan informasi kesehatan dasar kepada lansia melalui antarmuka percakapan.\nPengembangan Aplikasi “Direktori Aktivitas Sosial” Terpersonalisasi untuk Lansia: Membuat aplikasi yang memberikan rekomendasi kegiatan sosial atau komunitas di sekitar lokasi lansia, sesuai dengan minat dan kemampuan fisik mereka.",
+    "objectID": "topik-s3.html#tema-3-smart-living-environment",
+    "href": "topik-s3.html#tema-3-smart-living-environment",
+    "title": "2  Topik S3",
+    "section": "2.3 Tema 3: Smart Living Environment",
+    "text": "2.3 Tema 3: Smart Living Environment\n\nJudul: GRACE index for Community Computing its Application to Elder Living Population\n\nNomor Topik: D3.1\nDeskripsi Singkat:\nMahasiswa: Tiur Gantini\nStatus: Menuju SK3\n\nJudul: Multistakeholder Recommendation System for Healthy Food\n\nNomor Topik: D3.2\nDeskripsi Singkat:\nMahasiswa: Laili Wahyunita\nStatus: Menuju SK2",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik S3</span>"
     ]
   },
   {
-    "objectID": "topik-s1.html#topik-tugas-akhir-s1---sarjana-neurofeedback",
-    "href": "topik-s1.html#topik-tugas-akhir-s1---sarjana-neurofeedback",
-    "title": "2  Topik Tugas Akhir",
-    "section": "2.4 Topik Tugas Akhir (S1 - Sarjana) Neurofeedback",
-    "text": "2.4 Topik Tugas Akhir (S1 - Sarjana) Neurofeedback\n\nTopik 1: Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring.\n\nDeskripsi Singkat: Menguji dan memvalidasi sistem deteksi perhatian dalam lingkungan e-learning untuk melihat korelasi antara tingkat perhatian yang diukur EEG dengan hasil belajar mahasiswa.\n\nTopik 2: Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi.\n\nDeskripsi Singkat: Membandingkan dua jenis umpan balik (visual dan suara) pada sistem neurofeedback untuk menentukan mana yang lebih efektif dalam membantu pengguna mencapai kondisi relaksasi.",
+    "objectID": "topik-s3.html#tema-4-smart-signal-processing-for-human-therapy-purposes",
+    "href": "topik-s3.html#tema-4-smart-signal-processing-for-human-therapy-purposes",
+    "title": "2  Topik S3",
+    "section": "2.4 Tema 4: Smart Signal Processing for Human Therapy Purposes",
+    "text": "2.4 Tema 4: Smart Signal Processing for Human Therapy Purposes\n\nJudul: Development an Adaptive EEG Model for Machine Learning based Attention Detection (Neurofeedback Therapy)\n\nNomor Topik: D4.1\nDeskripsi Singkat:\nMahasiswa: Teddy Marcus Zakaria (Kontak: 085795650857)\nStatus: Menuju SK1",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik S3</span>"
+    ]
+  },
+  {
+    "objectID": "topik-s3.html#tema-5-smart-working-environment-in-academic-settings",
+    "href": "topik-s3.html#tema-5-smart-working-environment-in-academic-settings",
+    "title": "2  Topik S3",
+    "section": "2.5 Tema 5: Smart Working Environment in Academic Settings",
+    "text": "2.5 Tema 5: Smart Working Environment in Academic Settings\n\nJudul: Smart Campus Model\n\nNomor Topik: D5.1\nDeskripsi Singkat:\nMahasiswa: Radiant Victor Imbar\nStatus: Selesai (Tahun 2024)\n\nJudul: Framework Manajemen Cerdas Pengambilan Keputusan Menggunakan Pembelajaran Mesin dan Manajemen Pengetahuan untuk Mendukung Akreditasi Program Studi\n\nNomor Topik: D5.2\nDeskripsi Singkat:\nMahasiswa: Daniel Jahja Surjawan\nStatus: Menuju SK1\n\nJudul: Kerangka Kerja Manajemen Pengetahuan Kolaboratif Berbasis Rekayasa Cerdas untuk Pendidikan Tinggi Beriorientasi Nilai\n\nNomor Topik: D5.3\nDeskripsi Singkat:\nMahasiswa: Meliana Christianti Johan\nStatus: Menuju SK1",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Topik S3</span>"
     ]
   },
   {
@@ -120,13 +130,53 @@
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "4  Summary",
+    "objectID": "topik-s1.html",
+    "href": "topik-s1.html",
+    "title": "4  Topik Tugas Akhir",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.",
+    "text": "4.1 Daftar Topik Tugas Akhir (S1) - Kontribusi pada Layer Aplikasi MSRS",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+    ]
+  },
+  {
+    "objectID": "topik-s1.html#daftar-topik-tugas-akhir-s1---kontribusi-pada-layer-aplikasi-msrs",
+    "href": "topik-s1.html#daftar-topik-tugas-akhir-s1---kontribusi-pada-layer-aplikasi-msrs",
+    "title": "4  Topik Tugas Akhir",
+    "section": "",
+    "text": "Pengembangan Aplikasi Mobile MSRS untuk Peningkatan Gizi dan Dukungan UMKM Lokal (Studi Kasus: Lingkungan Kampus)\n\nDeskripsi Singkat: Merancang dan membangun prototipe aplikasi mobile yang memberikan rekomendasi makanan sehat dari kantin atau UMKM di sekitar kampus. Aplikasi ini akan divalidasi langsung oleh pengguna (mahasiswa) untuk menguji kemudahan penggunaan dan dampaknya terhadap pilihan makanan.\n\nRancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani)\n\nDeskripsi Singkat: Membuat sebuah aplikasi dashboard (berbasis web atau mobile) yang ditujukan khusus untuk produsen. Dashboard ini akan menampilkan visualisasi data tren permintaan pasar, preferensi konsumen, dan umpan balik, sehingga membantu produsen mengambil keputusan bisnis yang lebih baik.\n\nSistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan Makan Sehat di Kalangan Remaja\n\nDeskripsi Singkat: Mengimplementasikan fitur-fitur gamifikasi (seperti poin, lencana, dan tantangan) ke dalam aplikasi MSRS. Tujuan utamanya adalah untuk meningkatkan keterlibatan (engagement) dan motivasi pengguna, khususnya remaja, dalam memilih dan mempertahankan pola makan yang sehat.\n\nAnalisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP)\n\nDeskripsi Singkat: Membangun model NLP untuk secara otomatis menganalisis dan mengklasifikasikan ulasan atau umpan balik yang diberikan pengguna terhadap produk makanan dari UMKM. Hasil analisis ini dapat memberikan wawasan kualitatif yang berharga bagi produsen untuk meningkatkan kualitas produk mereka.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+    ]
+  },
+  {
+    "objectID": "topik-s1.html#topik-tugas-akhir-sarjana-s1-valorize",
+    "href": "topik-s1.html#topik-tugas-akhir-sarjana-s1-valorize",
+    "title": "4  Topik Tugas Akhir",
+    "section": "4.2 Topik Tugas Akhir Sarjana (S1) VALORIZE",
+    "text": "4.2 Topik Tugas Akhir Sarjana (S1) VALORIZE\n\nS1.1: Aplikasi untuk Visualisasi dan Manajemen Real-Time Portofolio PSKVE Mahasiswa\n\nDeskripsi Singkat: Merancang, mengembangkan, dan mengevaluasi sebuah aplikasi dasbor berbasis web yang berfungsi sebagai antarmuka utama bagi mahasiswa dan dosen untuk berinteraksi dan memvisualisasikan portofolio nilai PSKVE mereka.[1, 2, 9]\n\nS1.2: Pengembangan dan Validasi Alat Penilaian dan Rubrik untuk Peta Kognitif Formal\n\nDeskripsi Singkat: Mengembangkan sebuah rubrik penilaian yang terperinci dan alat pendukungnya untuk menilai kualitas peta kognitif formal, serta memvalidasi keandalannya secara ilmiah menggunakan statistik reliabilitas antar-penilai.[2, 10, 11]\n\nS1.3: Studi Kasus Penerapan Kerangka Kerja TISE PUDAL/TI pada Pengurangan Sampah Makanan\n\nDeskripsi Singkat: Melakukan studi kasus mendalam dengan menerapkan alur kerja kognitif TISE (PUDAL/Triune Intelligence) secara penuh untuk menganalisis dan mengusulkan solusi pada sub-masalah spesifik dalam krisis keberlanjutan pangan di Indonesia.[1, 12]\n\nS1.4: Evaluasi Usabilitas dan Efikasi Lingkungan Belajar TISE-VALORIZE\n\nDeskripsi Singkat: Melakukan studi penelitian formal dengan metode campuran untuk mengukur usabilitas kuantitatif dari alat-alat perangkat lunak dan mengeksplorasi persepsi kualitatif mahasiswa mengenai efektivitas pedagogis dari lingkungan belajar TISE-VALORIZE.[13, 14]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+    ]
+  },
+  {
+    "objectID": "topik-s1.html#daftar-topik-tugas-akhir-s1---layer-aplikasi-grace",
+    "href": "topik-s1.html#daftar-topik-tugas-akhir-s1---layer-aplikasi-grace",
+    "title": "4  Topik Tugas Akhir",
+    "section": "4.3 Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE",
+    "text": "4.3 Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE\n\nPerancangan dan Evaluasi Antarmuka “GRACE Life Map” untuk Refleksi Diri Lansia: Merancang dan menguji usabilitas sebuah aplikasi visualisasi narasi kehidupan yang intuitif dan menarik bagi lansia untuk membantu mereka merenungkan dan menceritakan kisah hidupnya.\nImplementasi Modul Gamifikasi untuk Mendorong Kontribusi Lansia di C-GRACE: Mengembangkan dan menguji aplikasi modul gamifikasi (poin, lencana, papan peringkat) yang dirancang khusus untuk memotivasi partisipasi lansia dalam berbagai kegiatan komunitas.\nAplikasi “Perekam Cerita Keluarga” pada F-GRACE untuk Komunikasi Antargenerasi: Membangun aplikasi seluler yang memandu lansia dan anggota keluarga yang lebih muda untuk merekam cerita dan kenangan bersama secara interaktif.\nPrototipe Chatbot “GRACE Health Companion” untuk Dukungan Kesehatan Harian: Mengembangkan aplikasi chatbot sederhana yang dapat memberikan pengingat minum obat, tips gaya hidup sehat, dan informasi kesehatan dasar kepada lansia melalui antarmuka percakapan.\nPengembangan Aplikasi “Direktori Aktivitas Sosial” Terpersonalisasi untuk Lansia: Membuat aplikasi yang memberikan rekomendasi kegiatan sosial atau komunitas di sekitar lokasi lansia, sesuai dengan minat dan kemampuan fisik mereka.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
+    ]
+  },
+  {
+    "objectID": "topik-s1.html#topik-tugas-akhir-s1---sarjana-neurofeedback",
+    "href": "topik-s1.html#topik-tugas-akhir-s1---sarjana-neurofeedback",
+    "title": "4  Topik Tugas Akhir",
+    "section": "4.4 Topik Tugas Akhir (S1 - Sarjana) Neurofeedback",
+    "text": "4.4 Topik Tugas Akhir (S1 - Sarjana) Neurofeedback\n\nTopik 1: Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring.\n\nDeskripsi Singkat: Menguji dan memvalidasi sistem deteksi perhatian dalam lingkungan e-learning untuk melihat korelasi antara tingkat perhatian yang diukur EEG dengan hasil belajar mahasiswa.\n\nTopik 2: Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi.\n\nDeskripsi Singkat: Membandingkan dua jenis umpan balik (visual dan suara) pada sistem neurofeedback untuk menentukan mana yang lebih efektif dalam membantu pengguna mencapai kondisi relaksasi.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Topik Tugas Akhir</span>"
     ]
   },
   {

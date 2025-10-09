@@ -1,5 +1,7 @@
 # Pengantar {.unnumbered}
 
-This is a Quarto book.
+Selamat datang di Kelompok Penelitian Triune Intelligence Smart Engineering (TISE).
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Di portal ini Anda dapat melihat daftar Topik tugas akhir, tesis, dan disertasi TISE yang sedang dikerjakan maupun yang sedang ditawarkan.
+
+Topik disusun berdasarkan tema atau topik besar, ynag kemudian diuraikan ke dalam topik-topik yang lebih spesifik.
