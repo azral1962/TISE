@@ -1,7 +1,3 @@
-# Topik Disertasi
-
-## Tema 2: Quality of Experience
-
 1.  Judul: Optimisasi QoE Layanan Video Streaming Berbasis Persepsi Pengguna
 
     1.  Nomor Topik: D2.1
