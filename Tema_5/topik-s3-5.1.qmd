@@ -1,74 +1,7 @@
-# Topik Disertasi
-
-## Tema 1: Project and Financial Engineering
-
-1.  Judul: Model Value Index Untuk Rekayasa Produk Finansial dengan penerapannya pada Digital Loan.
-
-    1.  Nomor Topik: D1.1
-
-    2.  Deskripsi Singkat:
-
-    3.  Mahasiwa: Sen Yung
-
-    4.  Status: Review Disertasi
-
-2.  Judul: Portofolio Project Optimisasi Model Menggunakan Pembiayaan Campuran
-
-    1.  Nomor Topik: D1.2
-
-    2.  Deskripsi Singkat:
-
-    3.  Mahasiswa: Nisa Hanum
-
-    4.  Status: SK2
-
-## Tema 2: Quality of Experience
-
-1.  Judul: Optimisasi QoE Layanan Video Streaming Berbasis Persepsi Pengguna
-
-    1.  Nomor Topik: D2.1
-
-    2.  Deskripsi Singkat:
-
-    3.  Mahasiswa: Fahmi Candra Permana
-
-    4.  Status: SK2
-
-## Tema 3: Smart Living Environment
-
-1.  Judul: GRACE index for Community Computing its Application to Elder Living Population
-    1.  Nomor Topik: D3.1
-    2.  Deskripsi Singkat:
-    3.  Mahasiswa: Tiur Gantini
-    4.  Status: Menuju SK3
-2.  Judul: Multistakeholder Recommendation System for Healthy Food
-    1.  Nomor Topik: D3.2
-    2.  Deskripsi Singkat:
-    3.  Mahasiswa: Laili Wahyunita
-    4.  Status: Menuju SK2
-
-## Tema 4: Smart Signal Processing for Human Therapy Purposes
-
-1.  Judul: Development an Adaptive EEG Model for Machine Learning based Attention Detection (Neurofeedback Therapy)
-    1.  Nomor Topik: D4.1
-    2.  Deskripsi Singkat:
-    3.  Mahasiswa: Teddy Marcus Zakaria (Kontak: 085795650857)
-    4.  Status: Menuju SK1
-
-## Tema 5: Smart Working Environment in Academic Settings
 
 1.  Judul: Smart Campus Model
     1.  Nomor Topik: D5.1
     2.  Deskripsi Singkat:
     3.  Mahasiswa: Radiant Victor Imbar
     4.  Status: Selesai (Tahun 2024)
-2.  Judul: Framework Manajemen Cerdas Pengambilan Keputusan Menggunakan Pembelajaran Mesin dan Manajemen Pengetahuan untuk Mendukung Akreditasi Program Studi
-    1.  Nomor Topik: D5.2
-    2.  Deskripsi Singkat:
-    3.  Mahasiswa: Daniel Jahja Surjawan
-    4.  Status: Menuju SK1
-3.  Judul: Kerangka Kerja Manajemen Pengetahuan Kolaboratif Berbasis Rekayasa Cerdas untuk Pendidikan Tinggi Beriorientasi Nilai
-    1.  Nomor Topik: D5.3
-    2.  Deskripsi Singkat:
-    3.  Mahasiswa: Meliana Christianti Johan
-    4.  Status: Menuju SK1
+
