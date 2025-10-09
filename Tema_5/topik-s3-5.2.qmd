@@ -1,7 +1,7 @@
 
 2.  Judul: Framework Manajemen Cerdas Pengambilan Keputusan Menggunakan Pembelajaran Mesin dan Manajemen Pengetahuan untuk Mendukung Akreditasi Program Studi
     1.  Nomor Topik: D5.2
-    2.  Deskripsi Singkat:
+    2.  Deskripsi Singkat: Penelitian ini mengusulkan pengembangan Framework Manajemen Cerdas (FMC) berbasis pembelajaran mesin (Machine Learning/ML) dan manajemen pengetahuan (Knowledge Management/KM) untuk mendukung pengambilan keputusan strategis dalam akreditasi program studi di perguruan tinggi. Melalui pendekatan Smart Engineering, framework ini dirancang untuk mengintegrasikan kecerdasan buatan, sistem data terpusat, dan peta pengetahuan agar siklus PPEPP (Perencanaan, Pelaksanaan, Evaluasi, Pengendalian, dan Peningkatan) dapat berjalan lebih efisien dan adaptif. FMC menggunakan arsitektur ASTF (Application, System, Technology, Fundamental) dan proses rekayasa V-Model dengan inti mesin PUDAL (Perceive, Understand, Decision, Act, Learn) yang berfungsi untuk melakukan persepsi data, memahami konteks standar akreditasi, mengambil keputusan berbasis bukti, mengeksekusi tindakan rekomendasi, dan belajar dari hasil akreditasi secara berkelanjutan. Penelitian ini diharapkan menghasilkan kerangka sistem cerdas yang mengotomatiskan evaluasi mutu, meningkatkan efektivitas pengambilan keputusan berbasis data, serta memperkuat kepatuhan terhadap standar akreditasi khususnya bagi perguruan tinggi dengan sumber daya terbatas.
     3.  Mahasiswa: Daniel Jahja Surjawan
     4.  Status: Menuju SK1
 
