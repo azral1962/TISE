@@ -7,8 +7,4 @@
 
     3.  Mahasiswa: Nisa Hanum
 
-<<<<<<< Updated upstream
     4.  Status: SK2
-=======
-    4.  Status: SK2
->>>>>>> Stashed changes
