@@ -1,2 +1,25 @@
 # Pendahuluan: Apa itu TISE
 
+Dalam mengerjakan Tugas Akhir, Tesis, atau Disertasi di lingkungan STEI ITB, setidaknya ada tiga kegiatan besar yang terjadi:
+
+1. Riset dan Studi
+    - Prototip Laboratorium sebagai proof of concept
+    - Penggunaan core engine oleh hard komponents dan pudal engine oleh agents
+
+2. Rekayasa Artefak
+    - Rilis 1: Usabilitas
+    - Rilis 2: Kualitas dan Akurasi
+    - Rilis 3: Efisiensi, waktu dan sumber daya
+    - Rilis 4: Biaya, Nilai, Sustainabilitas
+
+3. Penyusunan Tulisan dan Publikasi Ilmiah, yaitu 
+    - Kompilasi lengkap literatur dan catatan, serta journal riset
+    - Dokumen TA, Skripsi, atau Disertasi
+    - Paper Jurnal, Konferensi, dan Buku
+    - Presentasi dan Mutlimedia
+
+Kelompok riset TISE ini menerapakan 
+
+Dalam konsep TISE, solusi kuat memberdayakan, cerdas dalam beradaptaqsi dan sustainable di lingkungan alamiah, ekomoMi,sosial, budaya, dan sistem nilai
+
+Platform yang dubyanakan adalah sistem multi agen yang menjalankan siklus pudal yang memutar roda core engine. Core erngine adalah produk, dan pudal adalah servcie. Knowledge adalah LLM yaitu artificial intelliegence, komunitas adalah CI, sedangkan users memiliki Natural Intelligence

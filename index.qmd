@@ -5,3 +5,5 @@ Selamat datang di Kelompok Penelitian Triune Intelligence Smart Engineering (TIS
 Di portal ini Anda dapat melihat daftar Topik tugas akhir, tesis, dan disertasi TISE yang sedang dikerjakan maupun yang sedang ditawarkan.
 
 Topik disusun berdasarkan tema atau topik besar, ynag kemudian diuraikan ke dalam topik-topik yang lebih spesifik.
+
+TISE ini menerapkan SOLUSI engan hirarki

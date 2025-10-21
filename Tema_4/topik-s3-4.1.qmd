@@ -1,5 +1,46 @@
 1.  Judul: Development an Adaptive EEG Model for Machine Learning based Attention Detection (Neurofeedback Therapy)
     1.  Nomor Topik: D4.1
-    2.  Deskripsi Singkat: 
+    2.  Deskripsi Singkat:
     3.  Mahasiswa: Teddy Marcus Zakaria (Kontak: 085795650857)
     4.  Status: Menuju SK1
+
+```{mermaid}
+graph TD
+    A[Mulai: Identifikasi Minat] --> B(TA/Skripsi S1: Penerapan Teori);
+    A --> C(Tesis S2: Pengembangan Teori);
+    A --> D(Disertasi S3: Penemuan Teori/Kontribusi Baru);
+
+    B --> B1[Perumusan Masalah Sederhana (1-2)];
+
+    B1 --> B2[Kajian Literatur Dasar & Metode Sederhana];
+    B2 --> B3[Pelaksanaan Penelitian & Penulisan TA Skripsi];
+
+    B3 --> B4[Sidang TA/Skripsi];
+    B4 --> B5(Lulus S1: Sarjana);)
+
+    C --> C1[Perumusan Masalah Mendalam (Min. 3)];
+    C1 --> C2[Kajian Literatur Kritis & Sintesis, Metode Kompleks];
+    C2 --> C3[Uji Kelayakan Proposal Tesis];
+    C3 --> C4[Pelaksanaan Penelitian & Penulisan Tesis];
+    C4 --> C5[Ujian Sidang Tesis];
+    C5 --> C6(Lulus S2: Magister);
+
+    D --> D1[Perumusan Masalah Sangat Kritis ( > 3, Orisinal)];
+    D1 --> D2[Kajian Literatur Sangat Mendalam, Perumusan DALIL, Metode Mutakhir];
+    D2 --> D3[Uji Kelayakan Proposal Disertasi];
+    D3 --> D4[Ujian Hasil Disertasi/Pra-Sidang];
+    D4 --> D5[Penulisan & Publikasi (Wajib Internasional)];
+    D5 --> D6[Ujian Akhir/Sidang Terbuka Disertasi];
+    D6 --> D7(Lulus S3: Doktor);
+
+    B5 --> C{Lanjutan Studi S2};
+    C6 --> D{Lanjutan Studi S3};
+
+    style B fill:#f9f,stroke:#333
+    style C fill:#ccf,stroke:#333
+    style D fill:#ddf,stroke:#333
+    style B5 fill:#9f9,stroke:#333
+    style C6 fill:#9f9,stroke:#333
+    style D7 fill:#9f9,stroke:#333
+    
+```
