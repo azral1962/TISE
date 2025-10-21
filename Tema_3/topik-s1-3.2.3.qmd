@@ -1,0 +1,5 @@
+
+Kode TA-3.2.3  **Sistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan Makan Sehat di Kalangan Remaja**
+    * **Deskripsi Singkat:** Mengimplementasikan fitur-fitur gamifikasi (seperti poin, lencana, dan tantangan) ke dalam aplikasi MSRS. Tujuan utamanya adalah untuk meningkatkan keterlibatan (*engagement*) dan motivasi pengguna, khususnya remaja, dalam memilih dan mempertahankan pola makan yang sehat.
+
+    

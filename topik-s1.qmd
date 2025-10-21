@@ -1,52 +1,41 @@
 # Topik Tugas Akhir
 
-## **Daftar Topik Tugas Akhir (S1) - Kontribusi pada Layer Aplikasi MSRS**
 
-1.  **Pengembangan Aplikasi Mobile MSRS untuk Peningkatan Gizi dan Dukungan UMKM Lokal (Studi Kasus: Lingkungan Kampus)**
-    * **Deskripsi Singkat:** Merancang dan membangun prototipe aplikasi *mobile* yang memberikan rekomendasi makanan sehat dari kantin atau UMKM di sekitar kampus. Aplikasi ini akan divalidasi langsung oleh pengguna (mahasiswa) untuk menguji kemudahan penggunaan dan dampaknya terhadap pilihan makanan.
+## Tema 1: Project and Financial Engineering
 
-2.  **Rancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani)**
-    * **Deskripsi Singkat:** Membuat sebuah aplikasi *dashboard* (berbasis web atau *mobile*) yang ditujukan khusus untuk produsen. *Dashboard* ini akan menampilkan visualisasi data tren permintaan pasar, preferensi konsumen, dan umpan balik, sehingga membantu produsen mengambil keputusan bisnis yang lebih baik.
+N/A
 
-3.  **Sistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan Makan Sehat di Kalangan Remaja**
-    * **Deskripsi Singkat:** Mengimplementasikan fitur-fitur gamifikasi (seperti poin, lencana, dan tantangan) ke dalam aplikasi MSRS. Tujuan utamanya adalah untuk meningkatkan keterlibatan (*engagement*) dan motivasi pengguna, khususnya remaja, dalam memilih dan mempertahankan pola makan yang sehat.
+## Tema 2: Quality of Experience
 
-4.  **Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP)**
-    * **Deskripsi Singkat:** Membangun model NLP untuk secara otomatis menganalisis dan mengklasifikasikan ulasan atau umpan balik yang diberikan pengguna terhadap produk makanan dari UMKM. Hasil analisis ini dapat memberikan wawasan kualitatif yang berharga bagi produsen untuk meningkatkan kualitas produk mereka.
+N/A
 
+## Tema 3: Smart Living Environment
 
-## Topik Tugas Akhir Sarjana (S1) VALORIZE
-
-*   **S1.1: Aplikasi untuk Visualisasi dan Manajemen *Real-Time* Portofolio PSKVE Mahasiswa**
-    *   **Deskripsi Singkat:** Merancang, mengembangkan, dan mengevaluasi sebuah aplikasi dasbor berbasis web yang berfungsi sebagai antarmuka utama bagi mahasiswa dan dosen untuk berinteraksi dan memvisualisasikan portofolio nilai PSKVE mereka.[1, 2, 9]
-
-*   **S1.2: Pengembangan dan Validasi Alat Penilaian dan Rubrik untuk Peta Kognitif Formal**
-    *   **Deskripsi Singkat:** Mengembangkan sebuah rubrik penilaian yang terperinci dan alat pendukungnya untuk menilai kualitas peta kognitif formal, serta memvalidasi keandalannya secara ilmiah menggunakan statistik reliabilitas antar-penilai.[2, 10, 11]
-
-*   **S1.3: Studi Kasus Penerapan Kerangka Kerja TISE PUDAL/TI pada Pengurangan Sampah Makanan**
-    *   **Deskripsi Singkat:** Melakukan studi kasus mendalam dengan menerapkan alur kerja kognitif TISE (PUDAL/*Triune Intelligence*) secara penuh untuk menganalisis dan mengusulkan solusi pada sub-masalah spesifik dalam krisis keberlanjutan pangan di Indonesia.[1, 12]
-
-*   **S1.4: Evaluasi Usabilitas dan Efikasi Lingkungan Belajar TISE-VALORIZE**
-    *   **Deskripsi Singkat:** Melakukan studi penelitian formal dengan metode campuran untuk mengukur usabilitas kuantitatif dari alat-alat perangkat lunak dan mengeksplorasi persepsi kualitatif mahasiswa mengenai efektivitas pedagogis dari lingkungan belajar TISE-VALORIZE.[13, 14]
+{{< include ./Tema_3/topik-s1-3.1.1.qmd >}}
+{{< include ./Tema_3/topik-s1-3.1.2.qmd >}}
+{{< include ./Tema_3/topik-s1-3.1.3.qmd >}}
+{{< include ./Tema_3/topik-s1-3.1.4.qmd >}}
+{{< include ./Tema_3/topik-s1-3.1.4.qmd >}}
 
 
-## **Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE**
-
-1.  **Perancangan dan Evaluasi Antarmuka "GRACE Life Map" untuk Refleksi Diri Lansia:** Merancang dan menguji usabilitas sebuah aplikasi visualisasi narasi kehidupan yang intuitif dan menarik bagi lansia untuk membantu mereka merenungkan dan menceritakan kisah hidupnya.
-
-2.  **Implementasi Modul Gamifikasi untuk Mendorong Kontribusi Lansia di C-GRACE:** Mengembangkan dan menguji aplikasi modul gamifikasi (poin, lencana, papan peringkat) yang dirancang khusus untuk memotivasi partisipasi lansia dalam berbagai kegiatan komunitas.
-
-3.  **Aplikasi "Perekam Cerita Keluarga" pada F-GRACE untuk Komunikasi Antargenerasi:** Membangun aplikasi seluler yang memandu lansia dan anggota keluarga yang lebih muda untuk merekam cerita dan kenangan bersama secara interaktif.
-
-4.  **Prototipe Chatbot "GRACE Health Companion" untuk Dukungan Kesehatan Harian:** Mengembangkan aplikasi chatbot sederhana yang dapat memberikan pengingat minum obat, tips gaya hidup sehat, dan informasi kesehatan dasar kepada lansia melalui antarmuka percakapan.
-
-5.  **Pengembangan Aplikasi "Direktori Aktivitas Sosial" Terpersonalisasi untuk Lansia:** Membuat aplikasi yang memberikan rekomendasi kegiatan sosial atau komunitas di sekitar lokasi lansia, sesuai dengan minat dan kemampuan fisik mereka.
+{{< include ./Tema_3/topik-s1-3.2.1.qmd >}}
+{{< include ./Tema_3/topik-s1-3.2.2.qmd >}}
+{{< include ./Tema_3/topik-s1-3.2.3.qmd >}}
+{{< include ./Tema_3/topik-s1-3.2.4.qmd >}}
 
 
-## **Topik Tugas Akhir (S1 - Sarjana) Neurofeedback**
+## Tema 4: Smart Signal Processing for Human Therapy Purposes
 
-* **Topik 1: Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring.**
-    * **Deskripsi Singkat:** Menguji dan memvalidasi sistem deteksi perhatian dalam lingkungan *e-learning* untuk melihat korelasi antara tingkat perhatian yang diukur EEG dengan hasil belajar mahasiswa.
+{{< include ./Tema_4/topik-s1-4.1.1.qmd >}}
 
-* **Topik 2: Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi.**
-    * **Deskripsi Singkat:** Membandingkan dua jenis umpan balik (visual dan suara) pada sistem *neurofeedback* untuk menentukan mana yang lebih efektif dalam membantu pengguna mencapai kondisi relaksasi.
+{{< include ./Tema_4/topik-s1-4.1.2.qmd >}}
+
+
+## Tema 5: Smart Working Environment in Academic Settings
+
+
+    {{< include ./Tema_5/topik-s1-5.3.1.qmd >}}
+    {{< include ./Tema_5/topik-s1-5.3.2.qmd >}}
+    {{< include ./Tema_5/topik-s1-5.3.4.qmd >}}
+
+

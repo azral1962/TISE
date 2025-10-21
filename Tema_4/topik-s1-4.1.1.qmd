@@ -1,0 +1,6 @@
+
+KODE: TA-4.1.1 **Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring.**
+    * **Deskripsi Singkat:** Menguji dan memvalidasi sistem deteksi perhatian dalam lingkungan *e-learning* untuk melihat korelasi antara tingkat perhatian yang diukur EEG dengan hasil belajar mahasiswa.
+
+    
+

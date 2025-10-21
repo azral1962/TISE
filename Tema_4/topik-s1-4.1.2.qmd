@@ -1,0 +1,7 @@
+
+
+KODE: TA-4.1.2 **Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi.**
+    * **Deskripsi Singkat:** Membandingkan dua jenis umpan balik (visual dan suara) pada sistem *neurofeedback* untuk menentukan mana yang lebih efektif dalam membantu pengguna mencapai kondisi relaksasi.
+
+
+    

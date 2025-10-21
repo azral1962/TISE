@@ -16,20 +16,7 @@
 
 
 ## Topik Tugas Akhir Sarjana (S1) VALORIZE
-
-*   **S1.1: Aplikasi untuk Visualisasi dan Manajemen *Real-Time* Portofolio PSKVE Mahasiswa**
-    *   **Deskripsi Singkat:** Merancang, mengembangkan, dan mengevaluasi sebuah aplikasi dasbor berbasis web yang berfungsi sebagai antarmuka utama bagi mahasiswa dan dosen untuk berinteraksi dan memvisualisasikan portofolio nilai PSKVE mereka.[1, 2, 9]
-
-*   **S1.2: Pengembangan dan Validasi Alat Penilaian dan Rubrik untuk Peta Kognitif Formal**
-    *   **Deskripsi Singkat:** Mengembangkan sebuah rubrik penilaian yang terperinci dan alat pendukungnya untuk menilai kualitas peta kognitif formal, serta memvalidasi keandalannya secara ilmiah menggunakan statistik reliabilitas antar-penilai.[2, 10, 11]
-
-*   **S1.3: Studi Kasus Penerapan Kerangka Kerja TISE PUDAL/TI pada Pengurangan Sampah Makanan**
-    *   **Deskripsi Singkat:** Melakukan studi kasus mendalam dengan menerapkan alur kerja kognitif TISE (PUDAL/*Triune Intelligence*) secara penuh untuk menganalisis dan mengusulkan solusi pada sub-masalah spesifik dalam krisis keberlanjutan pangan di Indonesia.[1, 12]
-
-*   **S1.4: Evaluasi Usabilitas dan Efikasi Lingkungan Belajar TISE-VALORIZE**
-    *   **Deskripsi Singkat:** Melakukan studi penelitian formal dengan metode campuran untuk mengukur usabilitas kuantitatif dari alat-alat perangkat lunak dan mengeksplorasi persepsi kualitatif mahasiswa mengenai efektivitas pedagogis dari lingkungan belajar TISE-VALORIZE.[13, 14]
-
-
+    
 ## **Daftar Topik Tugas Akhir (S1) - Layer Aplikasi GRACE**
 
 1.  **Perancangan dan Evaluasi Antarmuka "GRACE Life Map" untuk Refleksi Diri Lansia:** Merancang dan menguji usabilitas sebuah aplikasi visualisasi narasi kehidupan yang intuitif dan menarik bagi lansia untuk membantu mereka merenungkan dan menceritakan kisah hidupnya.

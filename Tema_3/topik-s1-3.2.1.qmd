@@ -1,0 +1,5 @@
+
+Kode: TA-3.2.1 **Pengembangan Aplikasi Mobile MSRS untuk Peningkatan Gizi dan Dukungan UMKM Lokal (Studi Kasus: Lingkungan Kampus)**
+    * **Deskripsi Singkat:** Merancang dan membangun prototipe aplikasi *mobile* yang memberikan rekomendasi makanan sehat dari kantin atau UMKM di sekitar kampus. Aplikasi ini akan divalidasi langsung oleh pengguna (mahasiswa) untuk menguji kemudahan penggunaan dan dampaknya terhadap pilihan makanan.
+
+    

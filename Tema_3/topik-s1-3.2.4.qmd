@@ -1,0 +1,5 @@
+
+Kode TA-3.2.4 **Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP)**
+    * **Deskripsi Singkat:** Membangun model NLP untuk secara otomatis menganalisis dan mengklasifikasikan ulasan atau umpan balik yang diberikan pengguna terhadap produk makanan dari UMKM. Hasil analisis ini dapat memberikan wawasan kualitatif yang berharga bagi produsen untuk meningkatkan kualitas produk mereka.
+
+    

@@ -2,18 +2,6 @@
 
 ## **Daftar Topik Tugas Akhir (S1) - Kontribusi pada Layer Aplikasi MSRS**
 
-1.  **Pengembangan Aplikasi Mobile MSRS untuk Peningkatan Gizi dan Dukungan UMKM Lokal (Studi Kasus: Lingkungan Kampus)**
-    * **Deskripsi Singkat:** Merancang dan membangun prototipe aplikasi *mobile* yang memberikan rekomendasi makanan sehat dari kantin atau UMKM di sekitar kampus. Aplikasi ini akan divalidasi langsung oleh pengguna (mahasiswa) untuk menguji kemudahan penggunaan dan dampaknya terhadap pilihan makanan.
-
-2.  **Rancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani)**
-    * **Deskripsi Singkat:** Membuat sebuah aplikasi *dashboard* (berbasis web atau *mobile*) yang ditujukan khusus untuk produsen. *Dashboard* ini akan menampilkan visualisasi data tren permintaan pasar, preferensi konsumen, dan umpan balik, sehingga membantu produsen mengambil keputusan bisnis yang lebih baik.
-
-3.  **Sistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan Makan Sehat di Kalangan Remaja**
-    * **Deskripsi Singkat:** Mengimplementasikan fitur-fitur gamifikasi (seperti poin, lencana, dan tantangan) ke dalam aplikasi MSRS. Tujuan utamanya adalah untuk meningkatkan keterlibatan (*engagement*) dan motivasi pengguna, khususnya remaja, dalam memilih dan mempertahankan pola makan yang sehat.
-
-4.  **Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP)**
-    * **Deskripsi Singkat:** Membangun model NLP untuk secara otomatis menganalisis dan mengklasifikasikan ulasan atau umpan balik yang diberikan pengguna terhadap produk makanan dari UMKM. Hasil analisis ini dapat memberikan wawasan kualitatif yang berharga bagi produsen untuk meningkatkan kualitas produk mereka.
-
 
 ## Topik Tugas Akhir Sarjana (S1) VALORIZE
 

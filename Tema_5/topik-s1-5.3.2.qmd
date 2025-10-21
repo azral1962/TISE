@@ -1,0 +1,7 @@
+
+
+Kode TA-5.3.2 **Pengembangan dan Validasi Alat Penilaian dan Rubrik untuk Peta Kognitif Formal**
+    *   **Deskripsi Singkat:** Mengembangkan sebuah rubrik penilaian yang terperinci dan alat pendukungnya untuk menilai kualitas peta kognitif formal, serta memvalidasi keandalannya secara ilmiah menggunakan statistik reliabilitas antar-penilai.[2, 10, 11]
+
+    
+

@@ -1,0 +1,1 @@
+KODE TA-3.1.2 **Implementasi Modul Gamifikasi untuk Mendorong Kontribusi Lansia di C-GRACE:** Mengembangkan dan menguji aplikasi modul gamifikasi (poin, lencana, papan peringkat) yang dirancang khusus untuk memotivasi partisipasi lansia dalam berbagai kegiatan komunitas.
