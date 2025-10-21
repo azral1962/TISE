@@ -1,5 +1,5 @@
 
-2.  **Rancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani)**
+Kode TA-3.2.2 **Rancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani)**
     * **Deskripsi Singkat:** Membuat sebuah aplikasi *dashboard* (berbasis web atau *mobile*) yang ditujukan khusus untuk produsen. *Dashboard* ini akan menampilkan visualisasi data tren permintaan pasar, preferensi konsumen, dan umpan balik, sehingga membantu produsen mengambil keputusan bisnis yang lebih baik.
     
-    Kode TA-3.2.2
+    
