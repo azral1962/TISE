@@ -6,4 +6,8 @@ Di portal ini Anda dapat melihat daftar Topik tugas akhir, tesis, dan disertasi 
 
 Topik disusun berdasarkan tema atau topik besar, ynag kemudian diuraikan ke dalam topik-topik yang lebih spesifik.
 
+:::{.callout-warning}
+Portal ini *under construction*, sehingga perlu sering dikunjungi untuk mendapatkan *UPDATE* terkini.
+:::
+
 TISE ini menerapkan SOLUSI engan hirarki
