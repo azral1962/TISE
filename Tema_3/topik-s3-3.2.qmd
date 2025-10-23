@@ -1,6 +1,6 @@
 2.  Judul: Multistakeholder Recommendation System for Healthy Food
     1.  Nomor Topik: D3.2
-    2.  Deskripsi Singkat:
+    2.  Deskripsi Singkat: Penelitian disertasi ini bertujuan untuk membangun sebuah ecosystem sistem rekomendasi multi-stakeholder yang mengintegrasikan para pemangku kepentingan seperti konsumen, produsen, dengan framework upstream dan downstream stakeholder. Domain masalah yang digunakan adalah pada kasus makanan. 
     3.  Mahasiswa: Laili Wahyunita
     4.  Status: Menuju SK2
 
