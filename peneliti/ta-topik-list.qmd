@@ -1,0 +1,23 @@
+---
+title: "Daftar Pilihan Topik Tugas Akhir (TISE-RG)"
+format:
+  html:
+    theme: cosmo
+  pdf: default
+  docx: default
+page-layout: article
+lang: id
+---
+
+Laporan ini dibuat pada **October 23, 2025**.
+
+Berikut adalah daftar mahasiswa beserta NIM dan tiga pilihan topik tugas akhir yang didaftarkan.
+
+| Nama | NIM | Pilihan 1 | Pilihan 2 | Pilihan 3 |
+|-----------:|-----------:|:---------------|:---------------|:----------------|
+| Nicholas Francis Aditjandra | 18221005 | Kode TA-3.2.4 Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP) | KODE: TA-4.1.1 Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring. | KODE: TA-4.1.2 Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi. |
+| Luthfi Hanif | 18221151 | TA-3.2.2 Rancang Bangun Dashboard Visualisasi Data untuk Pemberdayaan Produsen Pangan (UMKM/Petani) | TA-3.2.4 Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP) | TA-3.1.4 Prototipe Chatbot “GRACE Health Companion” untuk Dukungan Kesehatan Harian |
+| Regina Deva Carissa | 18222040 | KODE TA-3.1.1: Perancangan dan Evaluasi Antarmuka “GRACE Life Map” untuk Refleksi Diri Lansia | Kode TA-5.3.4 Evaluasi Usabilitas dan Efikasi Lingkungan Belajar TISE-VALORIZE | Kode TA-5.3.2 Pengembangan dan Validasi Alat Penilaian dan Rubrik untuk Peta Kognitif Formal |
+| Kezia Caren Cahyadi | 18222041 | 3.1.1: Perancangan dan Evaluasi Antarmuka "GRACE Life Map" untuk Refleksi Diri Lansia | 4.1.2: Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi | 4.1.1: Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring |
+| Gymnastiar Anwar | 18222121 | Analisis Sentimen dan Klasifikasi Umpan Balik Pengguna pada Produk UMKM Menggunakan Natural Language Processing (NLP) | Prototipe Chatbot “GRACE Health Companion” untuk Dukungan Kesehatan Harian | Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring. |
+| Hanan Fitra Salam | 18222133 | TA-4.1.2 Studi Komparatif Efektivitas Umpan Balik Visual vs. Auditori dalam Sistem Neurofeedback EEG untuk Latihan Meditasi dan Relaksasi. | TA-4.1.1 Penerapan dan Analisis Sistem Deteksi Perhatian EEG untuk Mengukur Keterlibatan Mahasiswa pada Platform Pembelajaran Daring. | TA-3.2.3 Sistem Gamifikasi pada Aplikasi MSRS untuk Mendorong Kebiasaan Makan Sehat di Kalangan Remaja |

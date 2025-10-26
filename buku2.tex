@@ -1,0 +1,1804 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\author{}
+\date{}
+\begin{document}
+
+
+\section{Paradigma Triune‑Intelligence Smart Engineering
+(TISE)}\label{paradigma-triuneintelligence-smart-engineering-tise}
+
+\textbf{Subjudul:} Orkestra PSKVE untuk Menutup Gap dari Titik A ke
+Titik B
+
+\textbf{Penulis:} \textbf{Versi:} draf v0.1 \textbf{Catatan:} PSKVE
+merujuk pada lima dimensi (P, S, K, V, E) sesuai definisi Anda; buku ini
+menggunakan notasi tersebut tanpa menetapkan penamaan baku agar
+kompatibel dengan berbagai domain.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Kata Pengantar}\label{kata-pengantar}
+
+Kita hidup di era di mana kebutuhan bernilai tinggi makin kompleks,
+sementara kapasitas individu sering tak mencukupi untuk mencapainya
+sendirian. \textbf{TISE (Triune‑Intelligence Smart Engineering)}
+menawarkan paradigma rekayasa cerdas yang mengorkestrasi \textbf{NI
+(Natural/Human Intelligence)}, \textbf{AI (Artificial Intelligence)},
+dan \textbf{CI (Collective Intelligence)} di dalam \textbf{SUB‑RUANG}
+pada \textbf{RUANG PSKVE} untuk menutup \textbf{gap} dari \textbf{Titik
+A (keadaan kini)} ke \textbf{Titik B (keadaan target)} secara efektif,
+etis, terukur, dan berkelanjutan.
+
+Paradigma ini memetakan masalah sebagai sebuah \textbf{gap} di ruang
+multi‑dimensi PSKVE, lalu membangun \textbf{lingkungan kerja} yang
+terdiri dari \textbf{stasiun, jalan, dan kendaraan} yang berperan
+sebagai \textbf{agen cerdas} bersiklus \textbf{PUDAL} (Perception,
+Understanding, Decision, Action, Learning). Setiap agen digerakkan oleh
+\textbf{CORE ENGINE} yang mengonversi \textbf{energon} (satuan
+sumber‑daya) menjadi \textbf{work} (usaha nyata) melalui siklus
+\textbf{input → encode → decode → output}.
+
+Buku ini menyajikan landasan, arsitektur, pola orkestrasi, tata kelola,
+hingga implementasi dan studi kasus. Sasaran pembaca meliputi praktisi,
+peneliti, pendidik, pemimpin organisasi, dan pembuat kebijakan.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Cara Menggunakan Buku Ini}\label{cara-menggunakan-buku-ini}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Jalur Praktisi:} Baca Bagian I--III, lalu Bagian V--VI untuk
+  pola orkestrasi, tooling, dan studi kasus.
+\item
+  \textbf{Jalur Peneliti:} Dalami Bagian II \& VII mengenai CORE ENGINE,
+  konversi energon, metodologi eksperimen, dan standar publikasi.
+\item
+  \textbf{Jalur Pendidik:} Gunakan kerangka PSKVE \& PUDAL untuk
+  merancang tugas, rubrik, dan \emph{learning analytics}. Lihat Lampiran
+  C.
+\end{itemize}
+
+Setiap bab dilengkapi \textbf{Ringkasan}, \textbf{Tujuan Pembelajaran},
+\textbf{Pertanyaan Pemandu}, \textbf{Peta Konsep}, \textbf{Latihan}, dan
+\textbf{Kartu Aksi}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Notasi Inti}\label{notasi-inti}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{PSKVE}: Vektor keadaan ( s,t \in \mathbb{R}\^{}5 ) →
+  \textbf{gap} ( g=t-s ).
+\item
+  \textbf{SUB‑RUANG}: Subset operasional dalam RUANG PSKVE tempat
+  pertukaran \& transformasi PSKVE.
+\item
+  \textbf{Agen Cerdas}: Stasiun/Jalan/Kendaraan ber‑PUDAL.
+\item
+  \textbf{Energon}: Satuan sumber‑daya (data, waktu, perhatian, dana,
+  material, kepercayaan, kompetensi, dll.).
+\item
+  \textbf{CORE ENGINE}: Mesin konversi energon → work.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{BAGIAN I --- LANDASAN TISE}\label{bagian-i-landasan-tise}
+
+\subsection{Bab 1. Narasi Masalah \& Ruang
+PSKVE}\label{bab-1.-narasi-masalah-ruang-pskve}
+
+\textbf{Ringkasan.} Masalah direpresentasikan sebagai \textbf{gap}
+antara kondisi sekarang (A) dan target (B) di RUANG PSKVE. Tujuan
+rekayasa: menutup gap dengan memaksimalkan nilai multipihak dan
+keberlanjutan.
+
+\textbf{Tujuan Pembelajaran}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Memetakan masalah ke vektor PSKVE.
+\item
+  Mendefinisikan target dan metrik gap.
+\item
+  Mengidentifikasi stakeholders dan kebutuhannya.
+\end{enumerate}
+
+\textbf{Peta Konsep}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{graph LR}
+\NormalTok{  A[Titik A] {-}{-} gap g {-}{-}\textgreater{} B[Titik B]}
+\NormalTok{  subgraph RUANG PSKVE}
+\NormalTok{  A}
+\NormalTok{  B}
+\NormalTok{  end}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Konten Utama}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Model Keadaan}: ( s=(p,s,k,v,e) ), (
+  t=(p\textsuperscript{\emph{,s\^{}},k}\emph{,v\^{}},e\^{}*) ), gap (
+  g=t-s ).
+\item
+  \textbf{Kriteria Keberhasilan}: \emph{gap‑closure rate}, kepuasan
+  stakeholder, efisiensi energon, dan indeks keberlanjutan.
+\item
+  \textbf{Masalah sebagai Orkestrasi}: Bukan sekadar optimasi lokal,
+  melainkan koordinasi lintas agen \& dimensi PSKVE.
+\end{itemize}
+
+\textbf{Kartu Aksi}
+
+\begin{itemize}
+\tightlist
+\item
+  Definisikan A dan B dalam 5 dimensi PSKVE.
+\item
+  Pilih 3 metrik paling relevan untuk diukur mingguan.
+\end{itemize}
+
+\textbf{Latihan}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Petakan proyek Anda ke vektor PSKVE (5 angka bernorma 0--1). 2) Hitung
+  besaran (\textbar g\textbar) dan diskusikan implikasi prioritas.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Bab 2. Triune‑Intelligence (NI × AI ×
+CI)}\label{bab-2.-triuneintelligence-ni-ai-ci}
+
+\textbf{Ringkasan.} Keunggulan TISE terletak pada kopling
+\textbf{Natural/Human Intelligence (NI)}, \textbf{Artificial
+Intelligence (AI)}, dan \textbf{Collective Intelligence (CI)}. Ketiganya
+membentuk \emph{loop} saling menguatkan.
+
+\textbf{Tujuan Pembelajaran}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Merancang peran NI--AI--CI pada proses PSKVE.
+\item
+  Menentukan batas kewenangan dan eskalasi keputusan.
+\item
+  Mendesain mekanisme umpan balik untuk CI.
+\end{enumerate}
+
+\textbf{Konten Utama}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{NI}: makna, etika, empati, intuisi, \emph{tacit knowledge}.
+\item
+  \textbf{AI}: persepsi otomatis, pemodelan, optimasi, kopilot eksekusi.
+\item
+  \textbf{CI}: konsensus, tata‑kelola, \emph{peer review}, pasar
+  internal, komunitas.
+\item
+  \textbf{Arsitektur Keputusan}: keputusan penting = NI × AI × CI →
+  akurasi + akuntabilitas + kecepatan.
+\end{itemize}
+
+\textbf{Peta Peran}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{graph TD}
+\NormalTok{  NI[Human Intelligence]}
+\NormalTok{  AI[Artificial Intelligence]}
+\NormalTok{  CI[Collective Intelligence]}
+\NormalTok{  Outcome[Keputusan \& Aksi]}
+\NormalTok{  NI {-}{-}\textgreater{} Outcome}
+\NormalTok{  AI {-}{-}\textgreater{} Outcome}
+\NormalTok{  CI {-}{-}\textgreater{} Outcome}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Kartu Aksi}
+
+\begin{itemize}
+\tightlist
+\item
+  Buat matriks RACI untuk keputusan inti: kolom = \{NI, AI, CI\}, baris
+  = keputusan.
+\end{itemize}
+
+\textbf{Latihan}
+
+\begin{itemize}
+\tightlist
+\item
+  Rancang mekanisme \emph{disagreement handling} antara NI dan AI; kapan
+  CI menjadi arbitrase?
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Bab 3. Lingkungan Kerja: Stasiun, Jalan,
+Kendaraan}\label{bab-3.-lingkungan-kerja-stasiun-jalan-kendaraan}
+
+\textbf{Ringkasan.} SUB‑RUANG diisi \textbf{stasiun}
+(kapabilitas/layanan), \textbf{jalan} (protokol/alur kerja), dan
+\textbf{kendaraan} (agen pembawa/transformator PSKVE: manusia, tim, agen
+AI, robot). Engineer bertindak sebagai \textbf{dirigen} yang
+mengorkestrasi semuanya.
+
+\textbf{Tujuan Pembelajaran}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Mendesain SUB‑RUANG minimal‑layak (MVP) untuk proyek.
+\item
+  Menentukan kontrak pertukaran PSKVE.
+\item
+  Mengatur observabilitas arus PSKVE.
+\end{enumerate}
+
+\textbf{Konten Utama}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Stasiun}: Pengetahuan, Bukti, Nilai/Insentif,
+  Keterampilan/Produksi, dll.
+\item
+  \textbf{Jalan}: protokol, \emph{workflow}, \emph{service level
+  agreement}, antarmuka.
+\item
+  \textbf{Kendaraan}: peran manusia, agen AI, tim lintas fungsi.
+\item
+  \textbf{Kontrak PSKVE}: apa, siapa, kapan, kualitas, cara verifikasi.
+\end{itemize}
+
+\textbf{Peta Lingkungan Kerja}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{flowchart LR}
+\NormalTok{  subgraph SUB{-}RUANG}
+\NormalTok{    A[Stasiun Pengetahuan]}
+\NormalTok{    B[Stasiun Bukti]}
+\NormalTok{    C[Stasiun Nilai/Insentif]}
+\NormalTok{    D[Stasiun Produksi/Keterampilan]}
+\NormalTok{    R1((Jalan/Protokol 1))}
+\NormalTok{    R2((Jalan/Workflow 2))}
+\NormalTok{    V1\textgreater{}Vehicle: Tim Manusia]}
+\NormalTok{    V2\textgreater{}Vehicle: AI Agent]}
+\NormalTok{  end}
+\NormalTok{  A \textless{}{-}{-} R1 {-}{-}\textgreater{} B}
+\NormalTok{  B \textless{}{-}{-} R2 {-}{-}\textgreater{} C}
+\NormalTok{  C \textless{}{-}{-} R1 {-}{-}\textgreater{} D}
+\NormalTok{  V1 {-}{-}{-} A}
+\NormalTok{  V2 {-}{-}{-} B}
+\NormalTok{  V1 {-}{-}{-} C}
+\NormalTok{  V2 {-}{-}{-} D}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Kartu Aksi}
+
+\begin{itemize}
+\tightlist
+\item
+  Definisikan 3 stasiun awal + 2 jalan + 2 kendaraan untuk MVP.
+\end{itemize}
+
+\textbf{Latihan}
+
+\begin{itemize}
+\tightlist
+\item
+  Rumuskan \emph{PSKVE‑ledger} sederhana (tabel transaksi) untuk melacak
+  pertukaran \& hasil.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{BAGIAN II --- ARSITEKTUR PUDAL \& CORE
+ENGINES}\label{bagian-ii-arsitektur-pudal-core-engines}
+
+\subsection{Bab 4. PUDAL: Siklus Agen
+Cerdas}\label{bab-4.-pudal-siklus-agen-cerdas}
+
+\begin{itemize}
+\tightlist
+\item
+  Definisi dan peran setiap tahap; keterkaitan NI--AI--CI; pemosisian
+  metrik.
+\item
+  Pola umum \emph{sensing → modeling → deciding → executing → learning}.
+\end{itemize}
+
+\subsection{Bab 5--9. Lima CORE ENGINE}\label{bab-59.-lima-core-engine}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Perception Engine}: akuisisi sinyal, pembersihan,
+  fitur/representasi.
+\item
+  \textbf{Understanding Engine}: pemodelan, penjelasan, diagnosis gap.
+\item
+  \textbf{Decision Engine}: preferensi multipihak, MCDA, \emph{routing}
+  PSKVE.
+\item
+  \textbf{Action Engine}: eksekusi layanan, produksi artefak, automasi.
+\item
+  \textbf{Learning Engine}: evaluasi, \emph{counterfactuals}, pembaruan
+  aturan/model.
+\end{itemize}
+
+\textbf{Siklus Konversi Energon → Work}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Input (source energon) → 2) Encode (core energon) → 3) Decode (working
+  energon) → 4) Output (hasil \& reset).
+\end{enumerate}
+
+\textbf{KPI/KRI per Engine} (contoh): latensi sensing, kualitas model,
+\emph{decision regret}, throughput aksi, \emph{learning gain}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{BAGIAN III --- ORKESTRASI, GOVERNANCE, \&
+SUSTAINABILITY}\label{bagian-iii-orkestrasi-governance-sustainability}
+
+\subsection{Bab 10. Pola Orkestrasi
+SUB‑RUANG}\label{bab-10.-pola-orkestrasi-subruang}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Pipelines}, \emph{markets}, \emph{workcells}, \emph{hubs},
+  \emph{circuits}.
+\item
+  Desain rute, antrian, kapasitas, dan SLA.
+\end{itemize}
+
+\subsection{Bab 11. Governance \& Etika
+Triune}\label{bab-11.-governance-etika-triune}
+
+\begin{itemize}
+\tightlist
+\item
+  Batas kewenangan NI/AI, \emph{human‑in‑the‑loop}, auditability,
+  \emph{responsible AI}.
+\end{itemize}
+
+\subsection{Bab 12. Sustainability \&
+Risiko}\label{bab-12.-sustainability-risiko}
+
+\begin{itemize}
+\tightlist
+\item
+  Efisiensi energon, jejak sumber‑daya, ketahanan, \emph{failure modes},
+  mitigasi.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{BAGIAN IV --- INSTRUMEN \&
+TEKNOLOGI}\label{bagian-iv-instrumen-teknologi}
+
+\subsection{Bab 13. Prinsip Konversi
+Energon}\label{bab-13.-prinsip-konversi-energon}
+
+\begin{itemize}
+\tightlist
+\item
+  Hukum konservasi, efisiensi, rugi konversi, keamanan konversi
+  (data→insight, dana→kapasitas, kepercayaan→komitmen).
+\end{itemize}
+
+\subsection{Bab 14. Desain Instrumen}\label{bab-14.-desain-instrumen}
+
+\begin{itemize}
+\tightlist
+\item
+  Encoder/decoder PSKVE, skema insentif, kontrak \& verifikasi bukti.
+\end{itemize}
+
+\subsection{Bab 15. Implementasi
+Acuan}\label{bab-15.-implementasi-acuan}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{PSKVE‑ledger}, katalog stasiun, katalog kendaraan, pustaka rute,
+  dasbor gap.
+\end{itemize}
+
+\subsection{Bab 16. Tooling}\label{bab-16.-tooling}
+
+\begin{itemize}
+\tightlist
+\item
+  Contoh \emph{stack}: Python, Prolog/ontologi, Quarto/Typst,
+  Git/GitHub, dashboard.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{BAGIAN V --- STUDI KASUS}\label{bagian-v-studi-kasus}
+
+\subsection{Bab 17. Smart Loan Arranger
+(UMKM)}\label{bab-17.-smart-loan-arranger-umkm}
+
+\begin{itemize}
+\tightlist
+\item
+  Stasiun: Risiko, Bukti Transaksi, Nilai/Insentif, Produksi.
+\item
+  Kendaraan: Analis (NI), agen skor (AI), komunitas lender--borrower
+  (CI).
+\item
+  Metrik: NPL, \emph{gap closure} PSKVE borrower, \emph{co‑creation
+  value}.
+\end{itemize}
+
+\subsection{Bab 18. GRACE: Ekosistem
+Lansia}\label{bab-18.-grace-ekosistem-lansia}
+
+\textbf{Ringkasan.} GRACE adalah ekosistem pemberdayaan lansia yang
+memfasilitasi pertukaran \& transformasi \textbf{PSKVE} lintas
+\textbf{stasiun--jalan--kendaraan} dengan kopling \textbf{NI--AI--CI}.
+Tujuan akhirnya: \emph{well‑being}, kemandirian, makna, dan
+keberlanjutan sosial‑ekonomi. TISE memandang GRACE sebagai
+\textbf{SUB‑RUANG} pada RUANG PSKVE, di mana \textbf{energon} (data,
+waktu, perhatian, kepercayaan, kompetensi, dana) dikonversi menjadi
+\textbf{work} (layanan nyata, partisipasi, kontribusi, outcome kesehatan
+\& sosial) melalui PUDAL.
+
+\textbf{Tujuan Pembelajaran}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Mendesain SUB‑RUANG GRACE (stasiun, jalan, kendaraan) dan kontrak
+  PSKVE.
+\item
+  Merancang CORE ENGINES PUDAL untuk intervensi kesejahteraan lansia.
+\item
+  Menetapkan metrik \emph{gap closure}, fairness, dan sustainability.
+\end{enumerate}
+
+\textbf{Peta Konsep}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{graph LR}
+\NormalTok{  A[Titik A: kondisi lansia kini] {-}{-} gap g {-}{-}\textgreater{} B[Titik B: sejahtera \& mandiri]}
+\NormalTok{  subgraph SUB{-}RUANG GRACE}
+\NormalTok{    M[Stasiun Misi]}
+\NormalTok{    R[Stasiun Relasi]}
+\NormalTok{    K[Stasiun Kontribusi]}
+\NormalTok{    A2[Stasiun Aktivitas \& Kesehatan]}
+\NormalTok{    E[Stasiun Ekonomi \& Dukungan]}
+\NormalTok{  end}
+\NormalTok{  M\textless{}{-}{-}\textgreater{}R}
+\NormalTok{  R\textless{}{-}{-}\textgreater{}K}
+\NormalTok{  K\textless{}{-}{-}\textgreater{}A2}
+\NormalTok{  A2\textless{}{-}{-}\textgreater{}E}
+\NormalTok{  classDef s fill:\#eef,stroke:\#88f;}
+\NormalTok{  class M,R,K,A2,E s;}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{18.1 Latar Belakang \& Hipotesis
+Nilai}\label{latar-belakang-hipotesis-nilai}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Masalah}: Kesepian, penurunan fungsi, beban caregiver, dan
+  akses layanan yang terfragmentasi.
+\item
+  \textbf{Hipotesis}: Orkestrasi PSKVE berbasis TISE meningkatkan
+  \emph{well‑being} \& kemandirian dengan biaya yang terkendali, serta
+  memperluas partisipasi komunitas.
+\end{itemize}
+
+\subsubsection{18.2 Pemetaan Stakeholder \& Peran
+NI--AI--CI}\label{pemetaan-stakeholder-peran-niaici}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1610}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2627}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3390}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2373}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Stakeholder
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Peran NI (Human)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Peran AI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Peran CI
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Lansia & Preferensi, makna, tujuan hidup & Coach digital, pengingat,
+deteksi risiko & Kelompok dukungan, komunitas \\
+Keluarga/Teman & Empati, dukungan harian & Asisten caregiving,
+\emph{insight} routines & Jaringan keluarga \& tetangga \\
+Caregiver/Relawan & Perawatan, pendampingan & Penjadwal, prioritas,
+triase & Koordinasi shift \& rotasi \\
+Faskes/Profesional & Diagnosis, terapi & CDS, risk scoring & Rujukan
+terintegrasi \\
+Komunitas \& Gereja & Rohani, sosial & Matching kegiatan & Forum \&
+tata‑kelola \\
+Pemerintah/Asuransi & Kebijakan, skema & Fraud/risk, simulasi biaya &
+Konsensus pembiayaan \\
+\end{longtable}
+
+\subsubsection{18.3 Desain SUB‑RUANG GRACE}\label{desain-subruang-grace}
+
+\textbf{Stasiun} (layanan inti \& kapabilitas):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Misi} --- \emph{life purpose coaching}, spiritual care, narasi
+  makna.
+\item
+  \textbf{Relasi} --- \emph{relationship hub}, grup minat, \emph{buddy
+  system}, kunjungan.
+\item
+  \textbf{Kontribusi} --- \emph{contribution studio}, \emph{micro‑jobs},
+  mentoring, volunteering.
+\item
+  \textbf{Aktivitas \& Kesehatan} --- aktivitas fisik/kognitif,
+  monitoring vital, intervensi rumah.
+\item
+  \textbf{Ekonomi \& Dukungan} --- akses bantuan, asuransi, subsidi,
+  logistik (obat, alat bantu).
+\end{enumerate}
+
+\textbf{Jalan} (protokol \& workflow): onboarding, asesmen PSKVE,
+penentuan rencana, rujukan antar‑stasiun, \emph{follow‑up}, eskalasi
+klinis, \emph{closing the loop}.
+
+\textbf{Kendaraan} (agens): peran manusia (pendamping, fasilitator),
+agen AI (coach/triase), tim lintas fungsi, perangkat IoT, aplikasi
+seluler.
+
+\textbf{Kontrak PSKVE}: muatan (data, waktu, perhatian, dukungan, dana),
+standar kualitas (respons‑time, adherence), verifikasi (peer‑review,
+bukti aktivitas), \emph{privacy \& consent}.
+
+\subsubsection{18.4 PUDAL \& CORE ENGINES per
+Stasiun}\label{pudal-core-engines-per-stasiun}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Perception}: gejala, perilaku sosial, jadwal minum obat,
+  \emph{wearables}, check‑in emosional.
+\item
+  \textbf{Understanding}: profil risiko komposit
+  (fisik--kognitif--sosial--spiritual), \emph{trajectory} fungsi.
+\item
+  \textbf{Decision}: rute antar‑stasiun (mis. dari Relasi → Aktivitas),
+  prioritas intervensi, \emph{who‑does‑what‑when}.
+\item
+  \textbf{Action}: kunjungan, aktivitas kelompok, intervensi rumah,
+  tele‑konsultasi, \emph{micro‑jobs}.
+\item
+  \textbf{Learning}: \emph{outcome tracking}, \emph{counterfactuals},
+  penyesuaian rencana personal.
+\end{itemize}
+
+\textbf{CORE ENGINE} menerapkan siklus \textbf{Energon → Work}: 1) Input
+(mis. waktu relawan) → 2) Encode (slot jadwal \& komitmen) → 3) Decode
+(kegiatan terjadwal) → 4) Output (kehadiran \& efek pada
+\textbar g\textbar) + \emph{reset}.
+
+\subsubsection{18.5 Taksonomi Energon
+(contoh)}\label{taksonomi-energon-contoh}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1410}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2821}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2692}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3077}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Kategori
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Contoh Source Energon
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Core Energon (encode)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Working Energon (decode)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Data & vital, mobilitas, mood & fitur terstandar & skor risiko,
+rekomendasi \\
+Waktu & jam relawan/caregiver & slot jadwal & kunjungan, pendampingan \\
+Perhatian & sesi komunikasi & \emph{commitment token} & interaksi
+bermakna \\
+Kepercayaan & reputasi, referensi & \emph{trust score} & akses
+preferensial \\
+Kompetensi & keahlian relawan/ahli & katalog kompetensi & \emph{task
+matching} \\
+Dana/Barang & bantuan tunai/alat & \emph{budget token} &
+pengadaan/logistik \\
+\end{longtable}
+
+\subsubsection{18.6 Ledger PSKVE \& Skema
+Data}\label{ledger-pskve-skema-data}
+
+\textbf{Contoh CSV ledger}
+
+\begin{verbatim}
+timestamp,from_station,to_station,vehicle,pskve_payload,quality,verifier,outcome
+2025-01-12T09:00,Relasi,Aktivitas,Relawan,"kunjungan:30m;latihan ringan",0.9,koordinator,completed
+2025-01-12T10:15,Aktivitas,Ekonomi,AI-agent,"permintaan alat bantu jalan",0.95,case-worker,approved
+\end{verbatim}
+
+\textbf{Skema inti (JSON) --- event}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\{}
+  \DataTypeTok{"event\_id"}\FunctionTok{:} \StringTok{"evt\_001"}\FunctionTok{,}
+  \DataTypeTok{"person\_id"}\FunctionTok{:} \StringTok{"grace\_123"}\FunctionTok{,}
+  \DataTypeTok{"from"}\FunctionTok{:} \StringTok{"Relasi"}\FunctionTok{,}
+  \DataTypeTok{"to"}\FunctionTok{:} \StringTok{"Aktivitas"}\FunctionTok{,}
+  \DataTypeTok{"vehicle"}\FunctionTok{:} \StringTok{"Relawan"}\FunctionTok{,}
+  \DataTypeTok{"payload"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"kunjungan"}\FunctionTok{,} \DataTypeTok{"duration\_min"}\FunctionTok{:} \DecValTok{30}\FunctionTok{\},}
+  \DataTypeTok{"metrics"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"mood\_delta"}\FunctionTok{:} \FloatTok{0.2}\FunctionTok{,} \DataTypeTok{"mobility\_delta"}\FunctionTok{:} \FloatTok{0.1}\FunctionTok{\},}
+  \DataTypeTok{"quality"}\FunctionTok{:} \FloatTok{0.9}\FunctionTok{,}
+  \DataTypeTok{"verifier"}\FunctionTok{:} \StringTok{"koordinator"}\FunctionTok{,}
+  \DataTypeTok{"outcome"}\FunctionTok{:} \StringTok{"completed"}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{18.7 Indikator \& Dashboard}\label{indikator-dashboard}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Gap Closure Rate} (\textbar g\textbar{} PSKVE per individu \&
+  kohort)
+\item
+  \textbf{Independence Index} (ADL/IADL), \textbf{Loneliness Score},
+  \textbf{Participation Rate}
+\item
+  \textbf{Caregiver Relief Hours}, \textbf{Safety Incidents} (jatuh,
+  salah obat)
+\item
+  \textbf{Cost per Outcome}, \textbf{Sustainability Index} (efisiensi
+  energon)
+\item
+  \textbf{Fairness Metrics} (akses setara lintas wilayah/kelompok)
+\end{itemize}
+
+\subsubsection{18.8 Rute Orkestrasi (3
+skenario)}\label{rute-orkestrasi-3-skenario}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Kesepian → Relasi}: Perception (skor kesepian tinggi) →
+  Understanding (risiko depresi) → Decision (R: \emph{buddy system} +
+  komunitas minat) → Action (3 pertemuan/minggu) → Learning (turun skor
+  kesepian 30\%).
+\item
+  \textbf{Risiko Jatuh → Intervensi}: \emph{Wearable} deteksi gait
+  abnormal → triase AI → rujuk Aktivitas (latihan keseimbangan) +
+  Ekonomi (alat bantu) → \emph{home modification} → insiden turun 50\%.
+\item
+  \textbf{Kontribusi → Micro‑jobs}: Profil kompetensi → \emph{matching}
+  mentoring anak, dokumentasi sejarah lokal, kerajinan → insentif
+  kecil/rekognisi → peningkatan makna \& relasi.
+\end{enumerate}
+
+\textbf{Blueprint Layanan (Mermaid)}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sequenceDiagram}
+\NormalTok{  participant L as Lansia}
+\NormalTok{  participant R as Stasiun Relasi}
+\NormalTok{  participant A as Stasiun Aktivitas}
+\NormalTok{  participant E as Stasiun Ekonomi}
+\NormalTok{  participant AI as Agen AI}
+\NormalTok{  L{-}\textgreater{}\textgreater{}R: Check{-}in (mood lonely)}
+\NormalTok{  R{-}\textgreater{}\textgreater{}AI: Skor \& rekomendasi}
+\NormalTok{  AI{-}{-}\textgreater{}\textgreater{}R: Rekomendasi buddy + aktivitas}
+\NormalTok{  R{-}\textgreater{}\textgreater{}A: Rujukan kelas senam ringan}
+\NormalTok{  A{-}\textgreater{}\textgreater{}E: Permintaan alat bantu jalan}
+\NormalTok{  E{-}{-}\textgreater{}\textgreater{}L: Pengadaan \& pengantaran}
+\NormalTok{  A{-}{-}\textgreater{}\textgreater{}L: Pelatihan \& pemantauan}
+\NormalTok{  L{-}{-}\textgreater{}\textgreater{}R: Umpan balik (mood naik)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{18.9 Governance, Etika, \&
+Privasi}\label{governance-etika-privasi}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Consent berlapis}, minimasi data, \emph{purpose limitation},
+  \emph{role‑based access}.
+\item
+  \textbf{Human‑in‑the‑loop} pada keputusan material; audit
+  \emph{explainability} untuk AI.
+\item
+  \textbf{Safeguards}: \emph{red‑flag escalation}, perlindungan kelompok
+  rentan, \emph{bias check}.
+\end{itemize}
+
+\subsubsection{18.10 Rencana Pilot \& Skala}\label{rencana-pilot-skala}
+
+\textbf{Tahap P0 (0--3 bln)}: desain layanan, rekrut koordinator, 30
+peserta, 3 stasiun aktif. \textbf{P1 (4--9 bln)}: tambah 150 peserta,
+integrasi \emph{wearables}, ledger operasional. \textbf{P2 (10--18
+bln)}: kontrak pembiayaan, \emph{cost‑effectiveness} study, standarisasi
+SOP. \textbf{P3 (18+ bln)}: perluasan lintas kecamatan/kota;
+\emph{train‑the‑trainer}.
+
+\textbf{Kebutuhan Peran}: Dirigen (engineer), case‑worker, fasilitator
+relasi, pelatih aktivitas, koordinator ekonomi, \emph{data steward},
+\emph{AI ops}.
+
+\subsubsection{18.11 Metodologi Evaluasi \&
+Publikasi}\label{metodologi-evaluasi-publikasi}
+
+\begin{itemize}
+\tightlist
+\item
+  Desain kuasi-eksperimental / \emph{stepped‑wedge}; pengukuran
+  baseline--follow‑up (3/6/12 bln).
+\item
+  Analisis \emph{difference‑in‑differences} untuk outcome utama;
+  \emph{process mining} dari ledger.
+\item
+  Publikasi: \emph{open instruments}, \emph{reporting checklist},
+  template reproducible (Quarto).
+\end{itemize}
+
+\textbf{Kartu Aksi Bab 18}
+
+\begin{itemize}
+\tightlist
+\item
+  Bentuk tim inti \& pilih 30 peserta awal.
+\item
+  Tetapkan 5 KPI prioritas \& definisikan skema ledger.
+\item
+  Bangun \emph{buddy system} + 1 kelas aktivitas mingguan + 1 jalur
+  bantuan ekonomi.
+\end{itemize}
+
+\textbf{Latihan Bab 18}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Buat matriks rute antar‑stasiun untuk tiga persona (mandiri, rapuh,
+  dengan komorbid).
+\item
+  Desain \emph{consent flow} berlapis dan daftar \emph{red flags} untuk
+  eskalasi.
+\end{enumerate}
+
+\subsection{Bab 19. Smart Bed / Smart Furniture Smart Bed / Smart
+Furniture}\label{bab-19.-smart-bed-smart-furniture-smart-bed-smart-furniture}
+
+\begin{itemize}
+\tightlist
+\item
+  PUDAL fisik‑siber; persepsi → intervensi → pembelajaran personal.
+\end{itemize}
+
+\subsection{Bab 20. Transformasi Universitas \& Kelas
+Cerdas}\label{bab-20.-transformasi-universitas-kelas-cerdas}
+
+\begin{itemize}
+\tightlist
+\item
+  Orkestrasi PSKVE untuk kurikulum, asesmen, dan ekosistem riset.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{BAGIAN VI --- RISET \&
+EVALUASI}\label{bagian-vi-riset-evaluasi}
+
+\subsection{Bab 21. Metodologi
+Eksperimen}\label{bab-21.-metodologi-eksperimen}
+
+\begin{itemize}
+\tightlist
+\item
+  Desain studi, A/B, \emph{field trials}, validasi eksternal.
+\end{itemize}
+
+\subsection{Bab 22. Metrik \& Evaluasi}\label{bab-22.-metrik-evaluasi}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Gap Closure Rate}, \textbf{PSKVE Throughput},
+  \textbf{Stakeholder Utility}, \textbf{Sustainability Index},
+  \textbf{Reliability/Safety}.
+\end{itemize}
+
+\subsection{Bab 23. Publikasi \&
+Standar}\label{bab-23.-publikasi-standar}
+
+\begin{itemize}
+\tightlist
+\item
+  Template, \emph{open instruments}, repositori rujukan, lisensi.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Lampiran}\label{lampiran}
+
+\subsection{Lampiran A. Glosarium
+Singkat}\label{lampiran-a.-glosarium-singkat}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{TISE, PSKVE, PUDAL, Energon, CORE ENGINE, SUB‑RUANG, Stasiun,
+  Jalan, Kendaraan, Ledger}
+\end{itemize}
+
+\subsection{Lampiran B. Checklist
+Orkestrasi}\label{lampiran-b.-checklist-orkestrasi}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Pemetaan A dan B (PSKVE). 2) Peta stakeholders \& NI--AI--CI. 3)
+  SUB‑RUANG (stasiun, jalan, kendaraan). 4) Kontrak PSKVE. 5) PUDAL \&
+  CORE ENGINE. 6) Observabilitas. 7) KPI/KRI. 8) Siklus belajar.
+\end{enumerate}
+
+\subsection{Lampiran C. Template
+Praktis}\label{lampiran-c.-template-praktis}
+
+\textbf{1) Struktur Proyek Quarto (buku):}
+
+\begin{verbatim}
+paradigma-tise/
+  _quarto.yml
+  index.qmd
+  part1/
+    01-narasi-masalah.qmd
+    02-triune-intelligence.qmd
+    03-lingkungan-kerja.qmd
+  part2/
+    04-pudal.qmd
+    05-perception-engine.qmd
+    06-understanding-engine.qmd
+    07-decision-engine.qmd
+    08-action-engine.qmd
+    09-learning-engine.qmd
+  part3/
+    10-orkestrasi.qmd
+    11-governance.qmd
+    12-sustainability.qmd
+  part4/
+    13-energon-principles.qmd
+    14-instrument-design.qmd
+    15-reference-impl.qmd
+    16-tooling.qmd
+  part5/
+    17-case-sla.qmd
+    18-case-grace.qmd
+    19-case-smartbed.qmd
+    20-case-university.qmd
+  part6/
+    21-methods.qmd
+    22-metrics.qmd
+    23-publication.qmd
+  assets/
+    figures/
+    tables/
+    styles.css
+  data/
+  refs.bib
+\end{verbatim}
+
+\textbf{2) Contoh \texttt{\_quarto.yml}:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Paradigma TISE: Orkestra PSKVE dari A ke B"}
+\FunctionTok{author}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\StringTok{"\textless{}isi nama penulis\textgreater{}"}\KeywordTok{]}
+\FunctionTok{lang}\KeywordTok{:}\AttributeTok{ id}
+\FunctionTok{format}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{html}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{theme}\KeywordTok{:}\AttributeTok{ cosmo}
+\AttributeTok{    }\FunctionTok{toc}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{  }\FunctionTok{pdf}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{documentclass}\KeywordTok{:}\AttributeTok{ scrreprt}
+\FunctionTok{editor}\KeywordTok{:}\AttributeTok{ visual}
+\FunctionTok{number{-}sections}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\FunctionTok{bibliography}\KeywordTok{:}\AttributeTok{ refs.bib}
+\FunctionTok{site{-}url}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{3) Contoh awal \texttt{01-narasi-masalah.qmd}:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-}{-}}
+\AnnotationTok{title:}\CommentTok{ "Narasi Masalah \& Ruang PSKVE"}
+\CommentTok{{-}{-}{-}}
+
+\NormalTok{::: \{.callout{-}note\}}
+\NormalTok{**Tujuan:** Memetakan masalah ke vektor PSKVE dan merancang metrik gap.}
+\NormalTok{:::}
+
+\NormalTok{Masalah bernilai tinggi kita modelkan sebagai gap antara keadaan kini (A) dan target (B) di RUANG PSKVE. Dengan menyatakan keduanya sebagai vektor berdimensi lima, kita dapat menilai, memprioritaskan, dan mengorkestrasi jalan menuju B secara terukur.}
+
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{mermaid\}}
+\NormalTok{graph LR}
+\NormalTok{  A[Titik A] {-}{-} g {-}{-}\textgreater{} B[Titik B]}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Kartu Aksi}: Definisikan A, B, serta tiga metrik yang dipantau
+mingguan.
+
+\begin{verbatim}
+
+**4) Template Ledger PSKVE (CSV):**
+\end{verbatim}
+
+timestamp,from\_station,to\_station,vehicle,pskve\_payload,quality,verifier,outcome
+2025-01-01T09:00,pengetahuan,bukti,AI-agent,``fitur:
+\{x1:\ldots,x2:\ldots\}'',0.92,peer-review,accepted
+
+\begin{verbatim}
+
+**5) Rubrik Evaluasi Gap Closure (CSV):**
+\end{verbatim}
+
+indikator,definisi,skala,bobot GCR,``laju penurunan
+\textbar\textbar g\textbar\textbar{} per periode'',0-1,0.35
+PT,``throughput transaksi PSKVE'',0-1,0.25 SU,``kepuasan
+stakeholder'',0-1,0.25 SI,``indeks keberlanjutan'',0-1,0.15
+
+\begin{verbatim}
+
+## Lampiran D. Formalisasi Ringkas
+- **State & Target:** \( s,t \in \mathbb{R}^5 \), **gap** \( g=t-s \).
+- **Rute Orkestrasi:** \( \mathcal{R} = \{(station_i, road_{i\to i+1}, vehicle_i)\}_{i=1..n} \).
+- **Konversi Energon:** \( E^{core}_i=\mathrm{encode}(E^{in}_i),\; E^{work}_i=\mathrm{decode}(E^{core}_i) \).
+- **Optimasi:** Maksimalkan *gap‑closure rate* dengan batasan biaya, risiko, fairness, keberlanjutan.
+
+## Lampiran E. Peta Orkestra TISE
+```mermaid
+graph LR
+  Dirigen((Engineer))
+  Score[Protokol/Standar]
+  Stage[SUB-RUANG]
+  Players[Stasiun & Kendaraan]
+  Audience[Publik/Stakeholders]
+  Dirigen --> Players
+  Score --> Players
+  Stage --> Players
+  Players --> Audience
+  Audience -- Umpan balik --> Dirigen
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Lampiran F. Artefak Implementasi
+GRACE}\label{lampiran-f.-artefak-implementasi-grace}
+
+Lampiran ini merinci artefak siap‑pakai untuk pilot dan skala GRACE.
+Setiap artefak berformat markdown/YAML/JSON/CSV agar mudah
+diintegrasikan ke repositori (Git) dan alat kolaborasi.
+
+\subsection{F.1 Daftar Artefak}\label{f.1-daftar-artefak}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{SOP Operasional (F.2)}
+\item
+  \textbf{Template Formulir \& Dokumen (F.3)}
+\item
+  \textbf{Model Data \& Skema Database (F.4)}
+\item
+  \textbf{API Reference \& JSON Schemas (F.5)}
+\item
+  \textbf{Data Pipeline \& Integrasi Perangkat (F.6)}
+\item
+  \textbf{Dashboard \& Laporan (F.7)}
+\item
+  \textbf{QA, Uji Coba \& Monitoring (F.8)}
+\item
+  \textbf{Kurikulum Pelatihan (F.9)}
+\item
+  \textbf{Anggaran \& Resource Plan (F.10)}
+\item
+  \textbf{Keamanan \& Kepatuhan (F.11)}
+\item
+  \textbf{Checklist Eksekusi (F.12)}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.2 SOP Operasional
+(ringkas)}\label{f.2-sop-operasional-ringkas}
+
+\begin{quote}
+Struktur setiap SOP: \textbf{Tujuan • Lingkup • Peran (RACI) • Prasyarat
+• Langkah • KPI • Formulir Terkait • Catatan}
+\end{quote}
+
+\subsubsection{SOP‑01 Onboarding
+Peserta}\label{sop01-onboarding-peserta}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Tujuan:} Mendaftarkan lansia \& keluarga dengan \emph{consent}
+  sah.
+\item
+  \textbf{RACI:} R=Case Worker, A=Koordinator GRACE, C=Data Steward,
+  I=Dokter.
+\item
+  \textbf{Langkah:} (1) Pra‑screening → (2) Edukasi program → (3) Tanda
+  tangan consent → (4) Asesmen awal (PSKVE baseline) → (5) Buat rencana
+  personal.
+\item
+  \textbf{KPI:} \emph{Time‑to‑activate}, kelengkapan data, tingkat
+  pembatalan.
+\end{itemize}
+
+\subsubsection{SOP‑02 Onboarding
+Relawan}\label{sop02-onboarding-relawan}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Tujuan:} Merekrut \& mensahkan relawan.
+\item
+  \textbf{Langkah:} Edukasi → Pemeriksaan latar → Pelatihan →
+  Penandatanganan kode etik → Penjadwalan.
+\end{itemize}
+
+\subsubsection{SOP‑03 Asesmen Awal \& Rencana
+Personal}\label{sop03-asesmen-awal-rencana-personal}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Kuesioner ADL/IADL, \emph{loneliness}, mobilitas,
+  spiritual care; tentukan target PSKVE \& intervensi.
+\end{itemize}
+
+\subsubsection{SOP‑04 Rujukan Antar
+Stasiun}\label{sop04-rujukan-antar-stasiun}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Trigger → Validasi → Penetapan rute → Penugasan
+  kendaraan (relawan/AI/tim) → Jadwal.
+\end{itemize}
+
+\subsubsection{SOP‑05 Kunjungan Rumah / Kelas
+Aktivitas}\label{sop05-kunjungan-rumah-kelas-aktivitas}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Persiapan → Pelaksanaan → Pencatatan ledger → Umpan
+  balik.
+\end{itemize}
+
+\subsubsection{SOP‑06 Eskalasi Klinis / Red
+Flags}\label{sop06-eskalasi-klinis-red-flags}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Contoh Red Flags:} jatuh, kebingungan akut, penolakan
+  makan/obat, ide bunuh diri.
+\item
+  \textbf{Langkah:} Deteksi → Konfirmasi → Hubungi PIC medis →
+  Dokumentasi \& \emph{post‑incident review}.
+\end{itemize}
+
+\subsubsection{SOP‑07 Bantuan Ekonomi \&
+Logistik}\label{sop07-bantuan-ekonomi-logistik}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Verifikasi kebutuhan → Otorisasi → Pengadaan →
+  Pengantaran → Verifikasi penerimaan.
+\end{itemize}
+
+\subsubsection{SOP‑08 Proteksi Data \&
+Privasi}\label{sop08-proteksi-data-privasi}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Minimasi data, \emph{purpose limitation}, enkripsi
+  \emph{at rest} \& \emph{in transit}, kontrol akses berbasis peran,
+  \emph{privacy impact assessment}.
+\end{itemize}
+
+\subsubsection{SOP‑09 Incident Response}\label{sop09-incident-response}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Deteksi → Triage (P1‑P3) → Mitigasi → Komunikasi
+  pemangku kepentingan → Forensik → \emph{Lessons learned}.
+\end{itemize}
+
+\subsubsection{SOP‑10 Offboarding}\label{sop10-offboarding}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Langkah:} Konfirmasi penutupan → Ekspor ringkasan data →
+  \emph{Right to be forgotten} → Survei kepuasan.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.3 Template Formulir \&
+Dokumen}\label{f.3-template-formulir-dokumen}
+
+\subsubsection{F.3.1 Informed Consent
+(ID)}\label{f.3.1-informed-consent-id}
+
+\begin{verbatim}
+Judul: Persetujuan Bermaklumat (Informed Consent) Program GRACE
+Pihak: [Nama Peserta] / [Wali], [Organisasi Penyelenggara]
+Ruang Lingkup Data: identitas, kontak, kesehatan ringkas, aktivitas, catatan kunjungan
+Tujuan Penggunaan: layanan GRACE, evaluasi program, peningkatan mutu
+Hak Peserta: akses data, perbaikan, penarikan persetujuan, penghapusan data
+Keamanan: enkripsi, kontrol peran, audit
+Kontak Pengaduan: [email/telepon]
+Tanda Tangan: ________ Tanggal: ____
+\end{verbatim}
+
+\subsubsection{F.3.2 Intake/Asesmen Awal
+(YAML)}\label{f.3.2-intakeasesmen-awal-yaml}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{participant\_id}\KeywordTok{:}\AttributeTok{ grace\_123}
+\FunctionTok{profile}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ }\StringTok{"\textless{}nama\textgreater{}"}
+\AttributeTok{  }\FunctionTok{age}\KeywordTok{:}\AttributeTok{ }\DecValTok{72}
+\AttributeTok{  }\FunctionTok{living\_situation}\KeywordTok{:}\AttributeTok{ }\StringTok{"sendiri|dengan keluarga|panti"}
+\FunctionTok{pskve\_baseline}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{purpose}\KeywordTok{:}\AttributeTok{ }\FloatTok{0.6}
+\AttributeTok{  }\FunctionTok{social}\KeywordTok{:}\AttributeTok{ }\FloatTok{0.3}
+\AttributeTok{  }\FunctionTok{knowledge}\KeywordTok{:}\AttributeTok{ }\FloatTok{0.4}
+\AttributeTok{  }\FunctionTok{value}\KeywordTok{:}\AttributeTok{ }\FloatTok{0.5}
+\AttributeTok{  }\FunctionTok{economy}\KeywordTok{:}\AttributeTok{ }\FloatTok{0.4}
+\FunctionTok{risk}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{fall}\KeywordTok{:}\AttributeTok{ medium}
+\AttributeTok{  }\FunctionTok{loneliness}\KeywordTok{:}\AttributeTok{ high}
+\FunctionTok{plan\_goals}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{goal}\KeywordTok{:}\AttributeTok{ }\StringTok{"turunkan kesepian 30\% dalam 3 bulan"}
+\AttributeTok{    }\FunctionTok{kpi}\KeywordTok{:}\AttributeTok{ }\StringTok{"UCLA{-}LS delta \textgreater{}= 0.3"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{F.3.3 Log Check‑in Harian
+(CSV)}\label{f.3.3-log-checkin-harian-csv}
+
+\begin{verbatim}
+date,participant_id,mood,energy,med_adherence,notes
+2025-01-12,grace_123,3,4,yes,"tidur cukup"
+\end{verbatim}
+
+\subsubsection{F.3.4 Laporan Kunjungan
+(Markdown)}\label{f.3.4-laporan-kunjungan-markdown}
+
+\begin{verbatim}
+# Visit Report
+Participant: grace_123 | Date: 2025-01-15 | Visitor: rel_045
+Agenda: latihan ringan & percakapan bermakna
+Observasi: stabil; mood meningkat
+Tindak lanjut: kelas senam Jumat, cek alat bantu jalan
+\end{verbatim}
+
+\subsubsection{F.3.5 Form Red Flags
+(Checklist)}\label{f.3.5-form-red-flags-checklist}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Jatuh / hampir jatuh
+\item[$\square$]
+  Bingung berat
+\item[$\square$]
+  Menolak makan/obat
+\item[$\square$]
+  Ide bunuh diri
+\item[$\square$]
+  Kekerasan/KDRT
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.4 Model Data \& Skema
+Database}\label{f.4-model-data-skema-database}
+
+\subsubsection{F.4.1 Entitas Inti}\label{f.4.1-entitas-inti}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{person}(participant, caregiver), \textbf{household},
+  \textbf{station}, \textbf{plan}, \textbf{plan\_item}, \textbf{event},
+  \textbf{ledger}, \textbf{assessment}, \textbf{metric\_snapshot},
+  \textbf{device}, \textbf{device\_reading}, \textbf{consent},
+  \textbf{user}, \textbf{role}, \textbf{assignment},
+  \textbf{escalation\_ticket}, \textbf{audit\_log}.
+\end{itemize}
+
+\subsubsection{F.4.2 Skema SQL (PostgreSQL ---
+cuplikan)}\label{f.4.2-skema-sql-postgresql-cuplikan}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ person (}
+  \KeywordTok{id}\NormalTok{ TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{  full\_name TEXT }\KeywordTok{NOT} \KeywordTok{NULL}\NormalTok{,}
+\NormalTok{  birth\_date }\DataTypeTok{DATE}\NormalTok{,}
+  \KeywordTok{role}\NormalTok{ TEXT }\KeywordTok{CHECK}\NormalTok{ (}\KeywordTok{role} \KeywordTok{IN}\NormalTok{ (}\StringTok{\textquotesingle{}participant\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}caregiver\textquotesingle{}}\NormalTok{)),}
+\NormalTok{  contact JSONB,}
+\NormalTok{  created\_at }\DataTypeTok{TIMESTAMP} \KeywordTok{DEFAULT}\NormalTok{ now()}
+\NormalTok{);}
+
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ station (}
+  \KeywordTok{id}\NormalTok{ TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{  name TEXT }\KeywordTok{NOT} \KeywordTok{NULL}\NormalTok{,}
+  \KeywordTok{category}\NormalTok{ TEXT }\KeywordTok{CHECK}\NormalTok{ (}\KeywordTok{category} \KeywordTok{IN}\NormalTok{ (}\StringTok{\textquotesingle{}Misi\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Relasi\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Kontribusi\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Aktivitas\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Ekonomi\textquotesingle{}}\NormalTok{))}
+\NormalTok{);}
+
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ ledger\_event (}
+  \KeywordTok{id}\NormalTok{ TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{  person\_id TEXT }\KeywordTok{REFERENCES}\NormalTok{ person(}\KeywordTok{id}\NormalTok{),}
+\NormalTok{  from\_station TEXT }\KeywordTok{REFERENCES}\NormalTok{ station(}\KeywordTok{id}\NormalTok{),}
+\NormalTok{  to\_station TEXT }\KeywordTok{REFERENCES}\NormalTok{ station(}\KeywordTok{id}\NormalTok{),}
+\NormalTok{  vehicle TEXT,}
+\NormalTok{  payload JSONB,}
+\NormalTok{  quality }\DataTypeTok{NUMERIC} \KeywordTok{CHECK}\NormalTok{ (quality }\KeywordTok{BETWEEN} \DecValTok{0} \KeywordTok{AND} \DecValTok{1}\NormalTok{),}
+\NormalTok{  verifier TEXT,}
+\NormalTok{  outcome TEXT,}
+\NormalTok{  ts }\DataTypeTok{TIMESTAMP} \KeywordTok{DEFAULT}\NormalTok{ now()}
+\NormalTok{);}
+
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ consent (}
+  \KeywordTok{id}\NormalTok{ TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{  person\_id TEXT }\KeywordTok{REFERENCES}\NormalTok{ person(}\KeywordTok{id}\NormalTok{),}
+  \KeywordTok{scope}\NormalTok{ TEXT,}
+\NormalTok{  granted\_at }\DataTypeTok{TIMESTAMP}\NormalTok{,}
+\NormalTok{  revoked\_at }\DataTypeTok{TIMESTAMP}
+\NormalTok{);}
+
+\KeywordTok{CREATE} \KeywordTok{TABLE}\NormalTok{ metric\_snapshot (}
+  \KeywordTok{id}\NormalTok{ TEXT }\KeywordTok{PRIMARY} \KeywordTok{KEY}\NormalTok{,}
+\NormalTok{  person\_id TEXT }\KeywordTok{REFERENCES}\NormalTok{ person(}\KeywordTok{id}\NormalTok{),}
+\NormalTok{  metric TEXT,}
+  \FunctionTok{value} \DataTypeTok{NUMERIC}\NormalTok{,}
+\NormalTok{  ts }\DataTypeTok{TIMESTAMP} \KeywordTok{DEFAULT}\NormalTok{ now()}
+\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{F.4.3 Data Dictionary
+(cuplikan)}\label{f.4.3-data-dictionary-cuplikan}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ledger\_event.payload}: objek JSON berisi atribut domain
+  (\emph{visit}, \emph{class}, \emph{device\_alert}, dll.).
+\item
+  \textbf{metric\_snapshot.metric}:
+  \{``UCLA\_LS'',``ADL'',``IADL'',``Mobility'',``IndependenceIndex''\}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.5 API Reference \& JSON
+Schemas}\label{f.5-api-reference-json-schemas}
+
+\subsubsection{F.5.1 Endpoints (REST,
+v1)}\label{f.5.1-endpoints-rest-v1}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{POST /v1/ledger/events} --- catat peristiwa; \emph{idempotent
+  key} opsional.
+\item
+  \textbf{GET /v1/persons/\{id\}/metrics} --- \emph{timeseries} metrik.
+\item
+  \textbf{POST /v1/checkins} --- check‑in harian.
+\item
+  \textbf{POST /v1/consents} --- buat/ubah status consent.
+\item
+  \textbf{GET /v1/routes/recommend} --- rekomendasi rute antar stasiun.
+\item
+  \textbf{GET /v1/stations} --- daftar stasiun aktif.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{F.5.2 JSON Schema ---
+\texttt{LedgerEvent}}{F.5.2 JSON Schema --- LedgerEvent}}\label{f.5.2-json-schema-ledgerevent}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{\{}
+  \DataTypeTok{"$schema"}\FunctionTok{:} \StringTok{"https://json{-}schema.org/draft/2020{-}12/schema"}\FunctionTok{,}
+  \DataTypeTok{"title"}\FunctionTok{:} \StringTok{"LedgerEvent"}\FunctionTok{,}
+  \DataTypeTok{"type"}\FunctionTok{:} \StringTok{"object"}\FunctionTok{,}
+  \DataTypeTok{"required"}\FunctionTok{:} \OtherTok{[}\StringTok{"person\_id"}\OtherTok{,}\StringTok{"to"}\OtherTok{,}\StringTok{"vehicle"}\OtherTok{,}\StringTok{"ts"}\OtherTok{]}\FunctionTok{,}
+  \DataTypeTok{"properties"}\FunctionTok{:} \FunctionTok{\{}
+    \DataTypeTok{"id"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"person\_id"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"from"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"to"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"vehicle"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"payload"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"object"}\FunctionTok{\},}
+    \DataTypeTok{"quality"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"number"}\FunctionTok{,} \DataTypeTok{"minimum"}\FunctionTok{:} \DecValTok{0}\FunctionTok{,} \DataTypeTok{"maximum"}\FunctionTok{:} \DecValTok{1}\FunctionTok{\},}
+    \DataTypeTok{"verifier"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"outcome"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{\},}
+    \DataTypeTok{"ts"}\FunctionTok{:} \FunctionTok{\{}\DataTypeTok{"type"}\FunctionTok{:} \StringTok{"string"}\FunctionTok{,} \DataTypeTok{"format"}\FunctionTok{:} \StringTok{"date{-}time"}\FunctionTok{\}}
+  \FunctionTok{\}}
+\FunctionTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.6 Data Pipeline \& Integrasi
+Perangkat}\label{f.6-data-pipeline-integrasi-perangkat}
+
+\subsubsection{F.6.1 Arsitektur Aliran Data
+(Mermaid)}\label{f.6.1-arsitektur-aliran-data-mermaid}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{flowchart LR}
+\NormalTok{  subgraph Edge}
+\NormalTok{    Wearables{-}{-}\textgreater{}Phone[App Mobile]}
+\NormalTok{  end}
+\NormalTok{  Phone{-}{-}\textgreater{}Ingest[API Ingest]}
+\NormalTok{  Ingest{-}{-}\textgreater{}Queue[Message Queue]}
+\NormalTok{  Queue{-}{-}\textgreater{}Proc[Stream Processor]}
+\NormalTok{  Proc{-}{-}\textgreater{}DB[(Operational DB)]}
+\NormalTok{  Proc{-}{-}\textgreater{}Wh[(Data Warehouse)]}
+\NormalTok{  DB{-}{-}\textgreater{}Dash[Dashboard]}
+\NormalTok{  Wh{-}{-}\textgreater{}Dash}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{F.6.2 Kebijakan Data}\label{f.6.2-kebijakan-data}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{PII Segregation}, enkripsi, retensi 24 bulan, \emph{access
+  logging}, \emph{least privilege}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.7 Dashboard \& Laporan}\label{f.7-dashboard-laporan}
+
+\subsubsection{F.7.1 Widget Inti}\label{f.7.1-widget-inti}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Gap Closure} per individu/kohort (\textbar g\textbar{} PSKVE).
+\item
+  \textbf{Independence Index} (ADL/IADL).
+\item
+  \textbf{Loneliness Score} (UCLA‑LS) \& partisipasi.
+\item
+  \textbf{Insiden Keamanan} \& \emph{time‑to‑respond}.
+\item
+  \textbf{Throughput Ledger} per stasiun \& kendaraan.
+\item
+  \textbf{Fairness}: akses \& outcome lintas wilayah/kelompok.
+\item
+  \textbf{Cost per Outcome}.
+\end{enumerate}
+
+\subsubsection{F.7.2 Kueri (pseudo‑SQL)}\label{f.7.2-kueri-pseudosql}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{{-}{-} Gap closure terakhir 90 hari\textbackslash{} nSELECT person\_id,}
+  \FunctionTok{first\_value}\NormalTok{(}\FunctionTok{value}\NormalTok{) }\KeywordTok{OVER}\NormalTok{ w }\KeywordTok{AS} \KeywordTok{start}\NormalTok{,}
+  \FunctionTok{last\_value}\NormalTok{(}\FunctionTok{value}\NormalTok{) }\KeywordTok{OVER}\NormalTok{ w }\KeywordTok{AS} \ControlFlowTok{end}\NormalTok{,}
+\NormalTok{  (}\ControlFlowTok{end}\OperatorTok{{-}}\KeywordTok{start}\NormalTok{) }\KeywordTok{AS}\NormalTok{ delta}
+\KeywordTok{FROM}\NormalTok{ metric\_snapshot}
+\KeywordTok{WHERE}\NormalTok{ metric}\OperatorTok{=}\StringTok{\textquotesingle{}IndependenceIndex\textquotesingle{}}
+\NormalTok{WINDOW w }\KeywordTok{AS}\NormalTok{ (}\KeywordTok{PARTITION} \KeywordTok{BY}\NormalTok{ person\_id }\KeywordTok{ORDER} \KeywordTok{BY}\NormalTok{ ts}
+  \KeywordTok{RANGE} \KeywordTok{BETWEEN} \DataTypeTok{INTERVAL} \StringTok{\textquotesingle{}90 days\textquotesingle{}} \KeywordTok{PRECEDING} \KeywordTok{AND} \KeywordTok{CURRENT} \KeywordTok{ROW}\NormalTok{);}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.8 QA, Uji Coba \&
+Monitoring}\label{f.8-qa-uji-coba-monitoring}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Test Plan:} unit (API), integrasi (edge→warehouse), UAT (SOP
+  alur), beban (1k peserta).
+\item
+  \textbf{Acceptance:} kelengkapan event ≥ 98\%, \emph{SLO ingest
+  latency} p95 \textless{} 2s, \emph{error rate} \textless{} 0.5\%.
+\item
+  \textbf{Monitoring:} \emph{health checks}, \emph{synthetic
+  transactions}, \emph{alerting} on-call.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.9 Kurikulum Pelatihan}\label{f.9-kurikulum-pelatihan}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Relawan (6 jam):} etika \& privasi, komunikasi empatik, red
+  flags, pencatatan ledger.
+\item
+  \textbf{Case Worker (8 jam):} asesmen PSKVE, rute antar stasiun,
+  eskalasi.
+\item
+  \textbf{Koordinator (6 jam):} penjadwalan, QA, pelaporan.
+\item
+  \textbf{Data Steward \& AI Ops (8 jam):} kebijakan data, data quality,
+  model monitoring.
+\item
+  \textbf{Evaluasi:} kuis + \emph{observed structured practice}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.10 Anggaran \& Resource
+Plan}\label{f.10-anggaran-resource-plan}
+
+\subsubsection{F.10.1 Template Anggaran
+(CSV)}\label{f.10.1-template-anggaran-csv}
+
+\begin{verbatim}
+item,kategori,kuantitas,satuan,harga_satuan,total,catatan
+Koordinator,OPEX,1,orang/bulan,12000000,12000000,
+Relawan insentif,OPEX,30,orang/bulan,300000,9000000,
+Wearables,CAPEX,20,unit,800000,16000000,
+Server & Cloud,OPEX,1,bulan,6000000,6000000,
+Pelatihan,OPEX,2,sesi,2500000,5000000,
+\end{verbatim}
+
+\subsubsection{F.10.2 Rencana Peran (RACI
+ringkas)}\label{f.10.2-rencana-peran-raci-ringkas}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Dirigen/Engineer}, \textbf{Koordinator}, \textbf{Case Worker},
+  \textbf{Relawan}, \textbf{Data Steward}, \textbf{AI Ops},
+  \textbf{Dokter/Perawat}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.11 Keamanan \& Kepatuhan}\label{f.11-keamanan-kepatuhan}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Matriks Akses Berbasis Peran (RBAC)}: \emph{participant}
+  (self‑access), \emph{caregiver} (delegated), \emph{worker},
+  \emph{coordinator}, \emph{steward}, \emph{admin}.
+\item
+  \textbf{Klasifikasi Data:} Publik, Internal, Rahasia, Sensitif
+  Kesehatan.
+\item
+  \textbf{Audit \& Log:} \emph{immutable logs}, \emph{tamper evidence},
+  jadwal audit triwulan.
+\item
+  \textbf{Penghapusan Data:} prosedur \emph{right to erasure}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{F.12 Checklist Eksekusi (MVP 12
+Minggu)}\label{f.12-checklist-eksekusi-mvp-12-minggu}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Tim inti terbentuk \& pelatihan selesai
+\item[$\square$]
+  30 peserta \& 15 relawan aktif
+\item[$\square$]
+  3 stasiun berjalan (Relasi, Aktivitas, Ekonomi)
+\item[$\square$]
+  Ledger operasional \& dashboard dasar
+\item[$\square$]
+  SOP eskalasi aktif \& \emph{on‑call}
+\item[$\square$]
+  Review 4‑mingguan (\emph{gap closure}, insiden, biaya)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Ucapan Terima Kasih}\label{ucapan-terima-kasih}
+
+Terima kasih kepada seluruh kontributor konsep PSKVE,
+Triune‑Intelligence, serta para praktisi dan peneliti yang menguji
+gagasan ini di lapangan.
+
+\subsection{Lisensi (opsional)}\label{lisensi-opsional}
+
+Pilih lisensi terbuka/semi‑terbuka sesuai tujuan penyebarluasan artefak
+\& instrumen.
+
+
+
+
+\end{document}
